@@ -18,11 +18,153 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
+<script >
 
+  // Set the date we're counting down to
+  var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById(String("YtPlayer"))?.classList.remove("loading")
+    document.getElementById(String("YtPlayer"))?.classList.add("ready");
+  }
+}, 1000);
+</script>
+
+<style>
+
+  .loading{
+    opacity: 0;
+  }
+  .ready{
+    opacity: 1;
+  }
+  @-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+        className: ".ready";
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+</style>
 <Layout>
   <Header />
   <main id="main-content">
+    <div style="width: 100%; left: 0px; top: 0px; ">
+      <center style="width: 100%; height: 400px; left: 0px; top: 0px; ">
+        <img
+          data-src="./src/assets/images/Banner.png"
+          data-image="./src/assets/images/Banner.png"
+          data-image-dimensions="1580x500"
+          data-image-focal-point="0.5,0.5"
+          class="custom-fallback-image loaded"
+          data-load="false"
+          data-parent-ratio="2.7"
+          style="left: -692px; top: 0px; width: 3304px; height: 400px;"
+          alt="Banner.png"
+          data-image-resolution="2500w"
+          src="./src/assets/images/Banner.png?format=2500w"
+        />
+        <iframe
+          class="loading"
+          style="top: -460px; position: relative;
+          -webkit-animation: fadeInFromNone 1.0s 1.0s ease-out;
+          -moz-animation: fadeInFromNone  1.0s 1.0s ease-out;
+          -o-animation: fadeInFromNone  1.0s 1.0s ease-outs;
+          animation: fadeInFromNone  1.0s 1.0s ease-out;"
+          width="1050px"
+          height="500px"
+          id="YtPlayer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          src="https://www.youtube.com/embed/cpXMW4ceZs8?&autoplay=1&autohide=1&loop=1&playlist=cpXMW4ceZs8&mute=1&controls=0&fs=0&playsinline=1&start=13"
+          allowfullscreen>
+          </iframe>
+      </center>
+    </div>
+    <div
+      style="position: absolute; width: 100%; height: 502px; left: 0px; top: 99px;"
+    >
+    </div>
+    <div id="BannerDown"></div>
     <section id="hero">
+      <source src="movie.mp4" type="video/mp4" />
       <h1>Mingalaba</h1>
       <a
         target="_blank"
@@ -73,7 +215,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       featuredPosts.length > 0 && (
         <>
           <section id="featured">
-            <h2>Featured</h2>
+            <h2>Games</h2>
             <ul>
               {featuredPosts.map(({ data, slug }) => (
                 <Card
@@ -125,6 +267,12 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 </Layout>
 
 <style>
+  #BannerDown{
+    position:absolute;
+    top:520px;
+    height: 50px;
+    width: 100%;
+  }
   /* ===== Hero Section ===== */
   #hero {
     @apply pb-6 pt-8;
