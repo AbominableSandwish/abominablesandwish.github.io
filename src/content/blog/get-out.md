@@ -4,7 +4,7 @@ pubDatetime: 2024-01-22T15:46:34.737Z
 title: Get Out!
 slug: get-out-game
 featured: true
-ogImage: src\assets\images\BanierGetOut.gif
+ogImage: src/assets/images/BanierGetOut.gif
 ogBanner: src\assets\banners\GetOutBanner.png
 tags:
   - Game Jam
