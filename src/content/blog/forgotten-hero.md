@@ -4,8 +4,8 @@ pubDatetime: 2024-01-22T15:45:34.737Z
 title: Forgotten Hero
 slug: forgotten-hero-game
 featured: true
-ogImage: src\assets\images\ForgottenHero3.gif
-ogBanner: src\assets\banners\BannerForgottenHero.png
+ogImage: images/ForgottenHero3.gif
+ogBanner: images/BannerForgottenHero.png
 tags:
   - Game Jam
 info:

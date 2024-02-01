@@ -4,8 +4,8 @@ pubDatetime: 2024-01-22T15:30:34.737Z
 title: Space Panic
 slug: space-panic-game
 featured: true
-ogImage: src\assets\images\BanierSpacePanic.gif
-ogBanner: src\assets\banners\BannerSpacePanic.png
+ogImage: images/BanierSpacePanic.gif
+ogBanner: images/BannerSpacePanic.png
 tags:
   - Game Jam
 info:
