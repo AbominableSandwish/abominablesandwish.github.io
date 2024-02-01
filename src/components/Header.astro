@@ -124,8 +124,16 @@ const { activeNav } = Astro.props;
 <style>
    #BannerTop{
     position:absolute;
+    height: 0px;
+    width: 100%;
+  }
+
+  @media (min-width: 640px){
+    #BannerTop{
+    position:absolute;
     height: 120px;
     width: 100%;
+    }
   }
 
   #skip-to-content {

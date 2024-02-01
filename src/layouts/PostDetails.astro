@@ -62,7 +62,12 @@ const layoutProps = {
   </div>
   <main id="main-content">
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
-    <img src={ogImage?.toString()} width="100%"></img>
+    { 
+      ogBanner 
+      ? <img src={ogBanner?.toString()} width="100%"></img> 
+      : <img src={ogImage?.toString()} width="100%"></img>
+    } 
+    
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}

@@ -5,7 +5,16 @@ title: Space Panic
 slug: space-panic-game
 featured: true
 ogImage: src\assets\images\BanierSpacePanic.gif
+ogBanner: src\assets\banners\BannerSpacePanic.png
 tags:
   - Game Jam
-description: A fun little Game in which you play an astronaut which has to repaire his ship from damages cause by traveling through the dangers of space. The goal is to survive for as much time as possible!
+info:
+  - Gameplay Prog
+  - 3C
+  - Level Prog
+description: An astronaut which has to repaire his ship from damages cause by traveling through the dangers of space. The goal is to survive for as much time as possible!
+time: 48 Hours
+unity: true
+unreal: false
+godot: false
 ---

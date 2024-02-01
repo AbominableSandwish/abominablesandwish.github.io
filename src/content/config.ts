@@ -25,8 +25,16 @@ const blog = defineCollection({
         .or(z.string())
         .optional(),
       description: z.string(),
+      specificinity: z.string().optional(),
       canonicalURL: z.string().optional(),
+      teamsize: z.number().optional(),
       info: z.array(z.string()).default(["others"]),
+      time: z.string().optional(),
+      unity: z.boolean().optional(),
+      unreal: z.boolean().optional(),
+      godot: z.boolean().optional(),
+      onSteam: z.string().optional(),
+      onItchio: z.string().optional(),
     }),
 });
 

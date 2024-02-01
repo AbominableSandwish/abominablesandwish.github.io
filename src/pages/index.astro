@@ -55,6 +55,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   .ready{
     opacity: 1;
   }
+
   @-webkit-keyframes fadeInFromNone {
     0% {
         display: none;
@@ -128,8 +129,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <div style="width: 100%; left: 0px; top: 0px; ">
-      <center style="width: 100%; height: 400px; left: 0px; top: 0px; ">
+      <center id="BannerHead" style="width: 100%; left: 0px; top: 0px; ">
         <img
+          id="BannerHead" 
           data-src="./src/assets/images/Banner.png"
           data-image="./src/assets/images/Banner.png"
           data-image-dimensions="1580x500"
@@ -137,20 +139,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           class="custom-fallback-image loaded"
           data-load="false"
           data-parent-ratio="2.7"
-          style="left: -692px; top: 0px; width: 3304px; height: 400px;"
+          style="left: -692px; top: 0px; width: 3304px;"
           alt="Banner.png"
           data-image-resolution="2500w"
           src="./src/assets/images/Banner.png?format=2500w"
         />
         <iframe
           class="loading"
-          style="top: -460px; position: relative;
+          style="top: -510px; position: relative;
           -webkit-animation: fadeInFromNone 1.0s 1.0s ease-out;
           -moz-animation: fadeInFromNone  1.0s 1.0s ease-out;
           -o-animation: fadeInFromNone  1.0s 1.0s ease-outs;
           animation: fadeInFromNone  1.0s 1.0s ease-out;"
-          width="1050px"
-          height="500px"
           id="YtPlayer"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           src="https://www.youtube.com/embed/cpXMW4ceZs8?&autoplay=1&autohide=1&loop=1&playlist=cpXMW4ceZs8&mute=1&controls=0&fs=0&playsinline=1&start=13"
@@ -267,12 +267,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 </Layout>
 
 <style>
-  #BannerDown{
-    position:absolute;
-    top:520px;
-    height: 50px;
-    width: 100%;
-  }
+ 
   /* ===== Hero Section ===== */
   #hero {
     @apply pb-6 pt-8;
@@ -307,5 +302,42 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
+  }
+  
+  #YtPlayer
+    {
+      width: 0px;
+      height: 0px;
+    }
+
+    #BannerHead{
+      height: 50px;
+    }
+    
+    #BannerDown{
+      position:absolute;
+      top:520px;
+      height: 0px;
+      width: 100%;
+    }
+
+  @media (min-width: 640px)
+  {
+    #YtPlayer
+    {
+      width: 1050px;
+      height: 550px;
+    }
+
+    #BannerHead{
+      height: 450px;
+    }
+
+    #BannerDown{
+    position:absolute;
+    top:570px;
+    height: 50px;
+    width: 100%;
+  }
   }
 </style>
