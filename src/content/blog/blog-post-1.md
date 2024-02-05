@@ -19,6 +19,8 @@ info:
 "Girl & Kitty" is a game project set in a melancholic story where the main character will be accompanied by a cat in which together they will solve a multitude of puzzles that will block their path in a setting that intertwines the real and fantastic and dreamlike world or the graphics and the strong point, a camera must therefore be able to meet these expectations: Top-down to Side scroller, Key object, panoramic place, highlighting a specific element, various functionalities that have allowed the design of its behaviors that best transmit the user experience.
 The Beginning
 
+![Decor](/gif/FireFly.gif)
+
 The camera in Project Girl & Kitty cannot be directly controlled. The goal is for the player not to have to focus on it and to be able to think about the puzzles instead. It could also be possible to emphasize certain elements in order to better guide the player. The camera angle when it is not highlighting an element is a Top-down. If the level is small enough to be on one screen, the camera will be fixed, but if the level is larger than that, the camera will follow the player by blocking itself on the edges of the level. When the player approaches an interesting element, the camera can position itself to center it, once the player moves away from this point of interest, the camera resumes the player as the center.
 
 ## Importance of Objects
@@ -182,7 +184,6 @@ to a camera with a Side-scroller behavior, while leaving a certain minimum depth
 This required a modification of the camera scripts but fortunately this was only by limiting the parameters on the axis and by readapting all the camera behavior.
 
 but a notorious problem appeared from the passage of point of view, mainly on the positioning of the character on the screen, with the previous point of view that the character was not constantly in the center was not really handicapping because there was a wide field of vision to anticipate what can come into the players/players screen, but with the change of point of view, we notice that the characters stick to the edge of the screen and this completely ruins the fact of seeing the scenery and its objects arrive within the level, a readaptation of the camera behavior in order to calculate its position according to the direction or the character moves.
-Two Characters for the Price of One
 
 How to calculate the offset
 
@@ -241,7 +242,42 @@ else {
 Side-Scroller
 ![Side-Scroller](/gif/SideScroller.gif)
 
+##Two Characters for the Price of One
+
 Once all the above behaviors have been implemented, the main challenge that took a considerable amount of time is the transition of the camera behavior on our two protagonists who can find themselves in completely different situations, modification of the FOV, Camera rotation if the character is in a panoramic zone or outside of limits, ...
+
+```c++
+class UKeyObject;
+
+struct StateTarget
+{
+	UKeyObject* key = nullptr;
+	UKeyObject* key2 = nullptr;
+	bool targetKey = false;
+	bool is_look_target = false;
+
+	UKeyObject& GetKey() {
+		if (key2 != nullptr)
+			return *key2;
+		return *key;
+	}
+
+	void SetKey(UKeyObject* new_key) {
+		if (key2 != nullptr) {
+			this->key2 = new_key;
+			return;
+		}
+		this->key = new_key;
+	}
+}
+
+std::vector<StateTarget> states;
+int FocusCharacter = 0;
+```
+
+Example of swap
+![SwapCamera1](/gif/SwapCamera.gif)
+![SwapCamera2](/gif/SwapCamera_2.gif)
 
 ## Cinematic Camera (in production)
 
