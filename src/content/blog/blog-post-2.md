@@ -40,15 +40,180 @@ The girl can climb on the enlarged objects and pick up the objects shrunk by our
 
 The two protagonists can interact with certain objects, each with their own specific powers, in order to sometimes collect and use them to continue the level:
 
-### Enlargement/Shrinking
+```c++
 
-This is a state machine that manages the resizing of objects in order to have total control over their animation. First, the elevation raises the object a few centimeters to simulate a magic manipulation.
+```
 
-Then, the deformation phase manipulates the vertices of the object to improve the simulation of a magic spell.
+### Enlargement/Shrinking phase
+
+This is a state machine that manages the resizing of objects in order to have total control over their animation.
+
+```c++
+
+```
+
+### Elevating phase
+
+First, the elevation raises the object a few centimeters to simulate a magic manipulation.
+
+```c++
+  FTransform transf = (this->GetOwner()->GetTransform());
+	LerpProgress += dt / TimeFloating;
+	LerpProgress = FMath::Clamp(LerpProgress, 0, 1.0f);
+	transf.SetLocation(FMath::Lerp(start_position, next_position, LerpProgress));
+	FVector::Dist(transf.GetLocation(), next_position);
+	this->GetOwner()->SetActorTransform(transf, b_sweep);
+
+	if (FVector::Dist(next_position, this->GetOwner()->GetActorLocation()) <= 5.0f)
+	{
+		if (this->GetOwner()->GetComponentByClass<UInteractable>() != nullptr) {
+			this->GetOwner()->GetComponentByClass<UInteractable>()->EnableDistortion = true;
+		}
+
+		locationFloating = transf.GetLocation();
+		state = StateAction::Shaking;
+		LerpProgress = 0.0f;
+		this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->SetCollisionProfileName(storedObjectCollisionProfileName);
+		this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->SetEnableGravity(false);
+	}
+```
+
+### Deformation phase
+
+Manipulates the vertices of the object to improve the simulation of a magic spell.
+
+```c++
+	FTransform transf = (this->GetOwner()->GetTransform());
+	transf.SetLocation(locationFloating);
+	this->GetOwner()->SetActorTransform(transf);
+
+	counter += dt;
+	if (counter >= 1.5f)
+	{
+		state = StateAction::Resizing;
+	}
+```
+
+### Resizing phase
 
 The main phase is the resizing, during which the object must check if any objects are obstructing its transformation. If so, it moves in the opposite direction. If the objects are on the same axis, then the object is blocked between two others and it abandons its transformation and returns to its initial size for safety.
 
+```c++
+	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->SetSimulatePhysics(false);
+FTransform transf = (this->GetOwner()->GetTransform());
+locationFloating += direction * dt * 120.0f;
+transf.SetLocation(locationFloating);
+LerpProgress += dt / TimeToChangeSize;
+LerpProgress = FMath::Clamp(LerpProgress, 0, 1.0f);
+transf.SetScale3D(FMath::Lerp(isLittle ? Max3D : Min3D,
+	isLittle ? Min3D : Max3D, LerpProgress));
+
+this->GetOwner()->SetActorTransform(transf, b_sweep);
+
+bool isFinished = false;
+if (FVector::DistSquared(isLittle ? Min3D : Max3D, transf.GetScale3D()) < FLT_EPSILON)
+{
+	this->GetOwner()->SetActorTransform(transf);
+	transf.SetScale3D(isLittle ? Min3D : Max3D);
+	isFinished = true;
+	LerpProgress = 0.0f;
+}
+
+if (isFinished)
+{
+	if (this->GetOwner()->GetComponentByClass<UInteractable>() != nullptr) {
+		this->GetOwner()->GetComponentByClass<UInteractable>()->EnableDistortion = false;
+	}
+
+	countertouch = 0;
+	this->direction = FVector::ZeroVector;
+	locationFloating = FVector(0, 0, 0);
+	start_position = GetOwner()->GetActorLocation();
+	// BUG : Linetrace still detects own actor
+	FHitResult HitResult;
+	ECollisionChannel Channel = ECC_Visibility;
+	FCollisionQueryParams CollisionParams;
+	CollisionParams.AddIgnoredActor(GetOwner());
+	GetWorld()->LineTraceSingleByChannel(
+		HitResult, start_position, start_position + FVector(0, 0, -max_height - 1000), Channel, CollisionParams);
+	next_position = HitResult.Location;
+
+	if (this->GetOwner()->Tags.Num() != 0) {
+		if (this->GetOwner()->Tags[0] == FName("Boat")) {
+			state = StateAction::Fall;
+			return;
+		}
+	}
+
+	if (this->GetOwner()->Tags.Num() > 1) {
+		if (this->GetOwner()->Tags[1] == FName("Boat")) {
+			state = StateAction::Fall;
+			return;
+		}
+	}
+	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->SetSimulatePhysics(true);
+	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->SetEnableGravity(true);
+	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->AddForce(FVector::UpVector);
+	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>();
+	state = StateAction::None;
+}
+```
+
+### Falling phase (Success)
+
 Once this step is complete, it goes through the phase where its physical state is reset so that it can fall with gravity.
+
+```c++
+	FTransform transf = (this->GetOwner()->GetTransform());
+	LerpProgress += dt / TimeFloating;
+	LerpProgress = FMath::Clamp(LerpProgress, 0, 1.0f);
+	transf.SetLocation(FMath::Lerp(start_position, next_position, LerpProgress));
+	this->GetOwner()->SetActorTransform(transf);
+
+	if (FVector::Dist(next_position, this->GetOwner()->GetActorLocation()) <= 1.25f) {
+		locationFloating = transf.GetLocation();
+		state = StateAction::None;
+		LerpProgress = 0.0f;
+	}
+```
+
+### Abording phase
+
+```c++
+FTransform transf = (this->GetOwner()->GetTransform());
+transf.SetLocation(locationFloating);
+transf.SetScale3D(transf.GetScale3D() + FVector::OneVector * dt * size);
+this->GetOwner()->SetActorTransform(transf);
+
+bool isFinished = false;
+if (isLittle) {
+	if (transf.GetScale3D().Z <= Min3D.Z) {
+		transf.SetScale3D(OriginSize);
+		this->GetOwner()->SetActorTransform(transf);
+		isFinished = true;
+	}
+}
+else {
+	if (transf.GetScale3D().Z >= Min3D.Z) {
+		transf.SetScale3D(OriginSize);
+		this->GetOwner()->SetActorTransform(transf);
+		isFinished = true;
+	}
+}
+
+if (isFinished) {
+	if (this->GetOwner()->GetComponentByClass<UInteractable>() != nullptr) {
+		this->GetOwner()->GetComponentByClass<UInteractable>()->EnableDistortion = false;
+
+	}
+	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->SetEnableGravity(true);
+
+	locationFloating = FVector(0, 0, 0);
+	state = StateAction::None;
+}
+```
+
+### Diffulties
 
 The resizing of objects was difficult due to the lack of knowledge of the physics engine.
 
@@ -85,14 +250,7 @@ Manager and Trigger Area
 
 ## Difficulties Encountered
 
-My lack of knowledge of the Unreal engine blocked me on many different points:
-
-    Object hierarchy management
-    Physics engine
-    Lack of C++ documentation
-    Lack of manpower
-
-I made a bad choice in prioritizing a prototype in order to have the basic mechanics and validate the game design of our media project. This had the repercussion of working on a project without having total certainty of the final product for the team. This was a major mistake on my part due to a lack of initiative on what is essential!
+My lack of knowledge of the Unreal engine blocked me on many different points: Object hierarchy management, Physics engine,Lack of C++ documentation, Lack of manpower. I made a bad choice in prioritizing a prototype in order to have the basic mechanics and validate the game design of our media project. This had the repercussion of working on a project without having total certainty of the final product for the team. This was a major mistake on my part due to a lack of initiative on what is essential!
 
 Regarding the production of the Gameplay, the implementation of mandatory levels to test the different mechanics was an excellent initiative to verify the proper functioning and to quickly discover the problems caused by the modifications and the addition of additional mechanics. Two levels were created: one to test the mechanics in isolation and to perform a battery of specific tests, and another with the assembly of the mechanics to test them simultaneously and to balance and ensure the functioning of the loops.
 
