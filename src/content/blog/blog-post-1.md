@@ -25,6 +25,108 @@ The camera in Project Girl & Kitty cannot be directly controlled. The goal is fo
 
 The clarity of objects is necessary to lead the players/players sufficiently so that they do not get stuck on trivial details, the goal is not to point the solution directly to them but to accompany them so that they can progress smoothly and that all the mechanics during the learning phases should be as understandable as possible from a distance, only the puzzle phases are the only moments when we should intervene the minimum in order to offer a real Puzzle-game experience.
 
+how an object sets its attributes
+
+```c++
+void UCameraPro::SetKeyObject(UKeyObject& inputKey, int focusCharacter)
+{
+	this->states[focusCharacter].targetKey = true;
+	if (this->states[focusCharacter].key == nullptr || inputKey.layer == 1) {
+		this->states[focusCharacter].key = &inputKey;
+	}
+	else {
+		this->states[focusCharacter].key2 = &inputKey;
+	}
+
+	switch ((&this->states[focusCharacter].GetKey())->GetType())
+	{
+	case (int)ObjectType::None:
+		if (this->camera->GetFOVAngle() < origin_fov + MaxFOV) {
+			dir_fov = +1;
+			next_fov = origin_fov + MaxFOV;
+		}
+		if (this->camera->GetFOVAngle() > origin_fov - MaxFOV) {
+			dir_fov = -1;
+			next_fov = origin_fov - MaxFOV;
+		}
+		break;
+	case (int)ObjectType::Tiny:
+		if (this->camera->GetFOVAngle() > origin_fov - MaxFOV) {
+			dir_fov = -1;
+			next_fov = origin_fov - MaxFOV;
+		}
+		break;
+	case (int)ObjectType::Big:
+		if (this->camera->GetFOVAngle() < origin_fov + MaxFOV) {
+			dir_fov = +1;
+			next_fov = origin_fov + MaxFOV;
+		}
+		break;
+	}
+}
+```
+
+How the camera calculates the field of view
+
+```c++
+//Fov Control
+UKeyObject* currentKey = &this->states[FocusCharacter].GetKey();
+bool currentTargetKey = this->states[FocusCharacter].targetKey;
+
+bool updateFov = true;
+if (updateFov) {
+	if (currentKey != nullptr) {
+		if (this->states[FocusCharacter].targetKey) {
+			if (alpha < 0.5f) {
+				alpha += DeltaTime;
+			}
+			else {
+				alpha = 0.5f;
+			}
+		}
+		if (!this->states[FocusCharacter].targetKey) {
+			if (alpha > 0) {
+				alpha -= DeltaTime;
+			}
+			else {
+				alpha = 0;
+				this->states[FocusCharacter].SetKey(nullptr);
+			}
+		}
+
+		X = currentKey->GetOwner()->GetTransform().GetLocation().X;
+		Y = currentKey->GetOwner()->GetTransform().GetLocation().Y;
+
+		FVector positionKey = FVector(X, Y, positionTarget.Z);
+		dir_Y = std::lerp(positionTarget.Y, positionKey.Y, alpha)
+      - transformCamera.GetLocation().Y;
+		dir_X = std::lerp(positionTarget.X, positionKey.X, alpha)
+      - transformCamera.GetLocation().X - offsetCamera.X;
+	}
+}
+
+if (dir_fov < 0) {
+	if (this->camera->GetFOVAngle() > next_fov) {
+		this->camera->SetFOV(DeltaTime * velocity_fov * dir_fov
+      + this->camera->GetFOVAngle());
+	}
+	else {
+		this->camera->SetFOV(next_fov);
+		dir_fov = 0;
+	}
+}
+if (dir_fov > 0) {
+	if (this->camera->GetFOVAngle() < next_fov) {
+		this->camera->SetFOV(DeltaTime * velocity_fov * dir_fov
+      + this->camera->GetFOVAngle());
+	}
+	else {
+		this->camera->SetFOV(next_fov);
+		dir_fov = 0;
+	}
+}
+```
+
 The objective is to implement a camera behavior that can highlight certain game objects by manipulating its FOV, according to its size, and by interpolating the positions of the player and the object concerned if it is in its zone.
 
 ![CameraWithSmoothLerp](/gif/KeyObject_CameraWithSmoothLerp.gif)
@@ -33,19 +135,111 @@ The objective is to implement a camera behavior that can highlight certain game 
 
 In a so-called "dreamlike" game where there are no enemies, the players/players have all the time to discover the levels and enjoy its scenery as well as its atmosphere. In order to accentuate this, there is the implementation of view zones with which the camera behavior is altered so that it can make the players/players discover the scenery of the levels. The highlighting of certain places to better define them in order to guide them as the main objective of discovering the next step of the puzzle and as a secondary objective to encourage them to put down their controller in order to just enjoy the panoramas offered by the world design and the level design.
 The view zones work by rotating the camera.
-![ViewPanoramic](/gif/ViewPanoramicWithoutDecor.gif)
-![ViewPanoramic](/gif/ViewLocationV2.gif)
+
+```c++
+void UCameraPro::CalcCameraRotation(float DeltaTime) {
+  if (this->states[FocusCharacter].is_look_target) {
+	  if (beta < 1.0f) {
+		  beta += DeltaTime;
+	  }
+	  else {
+	  	beta = 1.0f;
+	  }
+
+	  FVector PositionPlayer = target->GetActorLocation();
+	  if(PositionPlayer.X > internal_position.X) {
+	  	PositionPlayer = FVector(internal_position.X, PositionPlayer.Y, PositionPlayer.Z);
+	  }
+	  external_position = (PositionPlayer - internal_position);
+
+	  if(isDebug)
+		  DebugCameraRotation(DeltaTime);
+  }
+  else {
+	  if (beta > 0.0f) {
+		  beta -= DeltaTime;
+	  }
+	  else {
+		  beta = 0.0f;
+	  }
+  }
+}
+```
+
+Version without decor
+![ViewPanoramicWithoutDecor](/gif/ViewPanoramicWithoutDecor.gif)
+Version with decor
+![ViewPanoramicWithDecor](/gif/ViewLocationV2.gif)
 
 ## Change of Point of View
 
 About 3/4 of the way through the project, there was a total change in the level design of the game, after some external feedback, the choice was made to greatly reduce the depth of the level which required a complete transformation of the camera's point of view by switching from a top-down
 
-to a camera with a Side-scroller behavior, while leaving a certain minimum depth for the movement phases and the right to enlarge this axis if it is a puzzle area.
+Top-down
+![Top-Down](/gif/Limit_Camera.gif)
 
+to a camera with a Side-scroller behavior, while leaving a certain minimum depth for the movement phases and the right to enlarge this axis if it is a puzzle area.
 This required a modification of the camera scripts but fortunately this was only by limiting the parameters on the axis and by readapting all the camera behavior.
 
 but a notorious problem appeared from the passage of point of view, mainly on the positioning of the character on the screen, with the previous point of view that the character was not constantly in the center was not really handicapping because there was a wide field of vision to anticipate what can come into the players/players screen, but with the change of point of view, we notice that the characters stick to the edge of the screen and this completely ruins the fact of seeing the scenery and its objects arrive within the level, a readaptation of the camera behavior in order to calculate its position according to the direction or the character moves.
 Two Characters for the Price of One
+
+How to calculate the offset
+
+```c++
+//If the character is within the camera zone
+if (inLimit) {
+	if (LastPositionTarget != positionTarget) {
+		LastPositionTarget = positionTarget;
+		if (last_DirY != 0 && dir_Y != 0) {
+			if (last_DirY < 0) {
+				if (dir_Y < 0) {
+					if (offsetY + positionTarget.Y > areaLimitMin.Y) {
+						if (offsetY > 0) {
+							offsetY -= DeltaTime * 300;
+						}
+						else {
+							offsetY -= DeltaTime * 150;
+						}
+						if (offsetY < -150.0f) {
+							offsetY = -150.0f;
+						}
+					}
+				}
+			}
+			if (last_DirY > 0) {
+				if (dir_Y > 0) {
+					if (offsetY < 0) {
+						offsetY += DeltaTime * 300;
+					}
+					else {
+						offsetY += DeltaTime * 150;
+					}
+					if (offsetY > 150.0f) {
+						offsetY = 150.0f;
+					}
+				}
+			}
+		}
+
+	}
+}
+else {
+	if (offsetY + positionTarget.Y < areaLimitMin.Y) {
+		if (offsetY + positionTarget.Y < positionTarget.Y) {
+			offsetY += DeltaTime * 300;
+		}
+	}
+	if (offsetY + positionTarget.Y > areaLimitMin.Y) {
+		if (offsetY + positionTarget.Y > positionTarget.Y) {
+			offsetY -= DeltaTime * 300;
+		}
+	}
+}
+```
+
+Side-Scroller
+![Side-Scroller](/gif/SideScroller.gif)
 
 Once all the above behaviors have been implemented, the main challenge that took a considerable amount of time is the transition of the camera behavior on our two protagonists who can find themselves in completely different situations, modification of the FOV, Camera rotation if the character is in a panoramic zone or outside of limits, ...
 
