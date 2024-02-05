@@ -1,12 +1,12 @@
 ---
 author: Dylan von Arx
 pubDatetime: 2024-02-05T15:30:34.737Z
-title: Camera Programming
-slug: camera-post-1
+title: Blogpost-1
+slug: blog-post-1
 featured: false
 ogImage: images/BlogpostBackgroundx300.png
 tags:
-  - Sae Institut
+  - Sae-Institut
 description: Here, you will find the key aspects and different analyses to highlight about the behavior and design of a camera in order to offer an adapted experience to guide the players wisely, the principles not to be neglected throughout a project and the chosen solutions.
 info:
   - Scholar
