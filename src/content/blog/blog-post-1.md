@@ -27,14 +27,14 @@ The clarity of objects is necessary to lead the players/players sufficiently so 
 
 The objective is to implement a camera behavior that can highlight certain game objects by manipulating its FOV, according to its size, and by interpolating the positions of the player and the object concerned if it is in its zone.
 
-![CameraWithSmoothLerp](/public/gif/KeyObject_CameraWithSmoothLerp.gif)
+![CameraWithSmoothLerp](/gif/KeyObject_CameraWithSmoothLerp.gif)
 
 ## Importance of the decor
 
 In a so-called "dreamlike" game where there are no enemies, the players/players have all the time to discover the levels and enjoy its scenery as well as its atmosphere. In order to accentuate this, there is the implementation of view zones with which the camera behavior is altered so that it can make the players/players discover the scenery of the levels. The highlighting of certain places to better define them in order to guide them as the main objective of discovering the next step of the puzzle and as a secondary objective to encourage them to put down their controller in order to just enjoy the panoramas offered by the world design and the level design.
 The view zones work by rotating the camera.
-![ViewPanoramic](/public/gif/ViewPanoramicWithoutDecor.gif)
-![ViewPanoramic](/public/gif/ViewLocationV2.gif)
+![ViewPanoramic](/gif/ViewPanoramicWithoutDecor.gif)
+![ViewPanoramic](/gif/ViewLocationV2.gif)
 
 ## Change of Point of View
 
