@@ -230,17 +230,17 @@ For example, let's take the boat.
 
 When the player discovers the Dropper, they will see a visual preview of a specific object. This object will be dematerialized, and the player will have previously passed by the real object. This will encourage them to bring it back to the intended location.
 
-![DropperInRequest]("/gif/DropperInRequest.gif")
+![DropperInRequest](/gif/DropperInRequest.gif)
 
 ### Step 2:
 
 Once the expected object is given to the Dropper, if the object needs to be enlarged, another animation will play to force the player to perform the necessary action.
-![DropperInAction]("/gif/DropperInAction.gif")
+![DropperInAction](/gif/DropperInAction.gif)
 
 ### Step 3:
 
 If all the steps have been completed, the Dropper will disappear and the object that will allow the puzzle to be unlocked will appear.
-![DropperInFinish]("/gif/DropperInFinish.gif")
+![DropperInFinish](/gif/DropperInFinish.gif)
 
 ## The Door
 
@@ -251,7 +251,7 @@ Of course, the door requires a key that can be obtained by solving the puzzles i
 The door needs a key that can be collected in the level. Therefore, it must have a victory animation to congratulate the players on solving the puzzle and completing the level. This animation will play when the key is collected and the door is opened.
 Manager and Trigger Area
 
-![DoorFading]("/gif/DoorFading.gif")
+![DoorFading](/gif/DoorFading.gif)
 
 ## Difficulties Encountered
 
