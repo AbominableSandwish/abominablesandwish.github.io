@@ -36,7 +36,65 @@ The cat from the dream world has the power to modify the physical and subatomic 
 
 The girl can climb on the enlarged objects and pick up the objects shrunk by our ball of fur.
 
-## sensor system
+## Sensor system
+
+The object sensor system works by casting a multitude of rays in front of the characters. The rays are cast until they reach a maximum angle or until they hit an object. The system then calculates which of the detected objects is the closest and stores it. If the player performs an action with the object, the system will use the stored information to determine what action to take.
+
+```c++
+// Defining the starting position
+TArray<FHitResult> objectsDetected;
+TArray<bool> results = TArray<bool>();
+TArray<AActor*> actorsDetected = TArray<AActor*>();
+FVector BaseLocation;
+if (this->GetOwner()->Tags.Num() != 0) {
+	if(this->GetOwner()->Tags[0] == FName("Player"))
+		BaseLocation = offset_girl + this->GetOwner()->GetActorLocation() + this->GetOwner()->GetActorForwardVector() * minimum;
+	if (this->GetOwner()->Tags[0] == FName("Cat"))
+		BaseLocation = offset_cat + this->GetOwner()->GetActorLocation() + this->GetOwner()->GetActorForwardVector() * minimum;
+}
+const FVector End = BaseLocation + this->GetOwner()->GetActorForwardVector() * maximum;
+
+// Sensor system
+for (size_t h = 0; h < raycast_stacks; h++) {
+	FRotator tempRot = GetOwner()->GetActorRotation()- FRotator(0, raycast_start_angle, 0);
+
+	FVector Location = BaseLocation + h * FVector::UpVector * raycast_stacks_distance;
+	for (size_t i = 0; i < number_raycast; i++)
+	{
+		FHitResult objectDetected;
+		tempRot += FRotator(0, raycast_angle_change, 0);
+		FVector end = Location + tempRot.Quaternion().GetForwardVector() * maximum;
+		results.Add(GetWorld()->LineTraceSingleByChannel(objectDetected, Location, end , ECollisionChannel::ECC_Visibility, CollisionParameters));
+		if (results[i] && objectDetected.GetActor() != nullptr) {
+			if (objectDetected.GetActor()->Tags.Num() != 0) {
+				actorsDetected.Add(objectDetected.GetActor());
+			}
+		}
+		else {
+			if (ActorTarget != nullptr)
+				deselect = true;
+		}
+	}
+}
+// Calculating the nearest detected object
+double min_distance = 0;
+AActor* nearActor = nullptr;
+for (int i = 0; i != actorsDetected.Num(); i++)
+{
+	if (isDebug)
+		GEngine->AddOnScreenDebugMessage(-1, 0.0f, FColor::Purple, FString::SanitizeFloat(FVector::Dist(actorsDetected[i]->GetActorLocation(), GetOwner()->GetActorLocation())));
+	if (nearActor == nullptr) {
+		nearActor = actorsDetected[i];
+		min_distance = FVector::Dist(actorsDetected[i]->GetActorLocation(), GetOwner()->GetActorLocation());
+	}
+	else{
+		if(min_distance > FVector::Dist(actorsDetected[i]->GetActorLocation(), GetOwner()->GetActorLocation()))
+			nearActor = actorsDetected[i];
+			min_distance = FVector::Dist(actorsDetected[i]->GetActorLocation(), GetOwner()->GetActorLocation());
+	}
+
+}
+```
 
 ## Objects, cubes, the boat, the key, and others...
 
