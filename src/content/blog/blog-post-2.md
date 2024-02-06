@@ -40,6 +40,8 @@ The girl can climb on the enlarged objects and pick up the objects shrunk by our
 
 The object sensor system works by casting a multitude of rays in front of the characters. The rays are cast until they reach a maximum angle or until they hit an object. The system then calculates which of the detected objects is the closest and stores it. If the player performs an action with the object, the system will use the stored information to determine what action to take.
 
+![Sensor](/images/detectionv3.gif)
+
 ```c++
 // Defining the starting position
 TArray<FHitResult> objectsDetected;
