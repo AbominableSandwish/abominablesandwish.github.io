@@ -173,10 +173,17 @@
   
   #description_post{
     margin-top: 0%;
-
     margin-left: 2%;
     float: left;
     width: 42%;
+    height: 100%;
+  }
+    
+  #description_post_full{
+    margin-top: 0%;
+    margin-left: 2%;
+    float: left;
+    width: 57%;
     height: 100%;
   }
   

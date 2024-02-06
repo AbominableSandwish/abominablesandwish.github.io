@@ -25,6 +25,7 @@ const blog = defineCollection({
         .or(z.string())
         .optional(),
       description: z.string(),
+      descriptionMore: z.boolean().optional(),
       specificinity: z.string().optional(),
       canonicalURL: z.string().optional(),
       teamsize: z.number().optional(),
