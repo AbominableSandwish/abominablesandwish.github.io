@@ -93,11 +93,9 @@ Manipulates the vertices of the object to improve the simulation of a magic spel
 
 #### Resizing phase
 
-The main phase is the resizing, during which the object must check if any objects are obstructing its transformation. If so, it moves in the opposite direction. If the objects are on the same axis, then the object is blocked between two others and it abandons its transformation and returns to its initial size for safety.
+the main phase of the process is to resize the object. If there is no object that is blocking the object from being resized, then the object will continue to be resized using linear interpolation until it reaches the desired size.
 
 ![ResizingPhase](/gif/ResizingPhase.gif)
-
-![TestResizing](/gif/ResizingObjectV2.gif)
 
 ```c++
 	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->SetSimulatePhysics(false);
@@ -159,6 +157,83 @@ if (isFinished)
 	state = StateAction::None;
 }
 ```
+
+The object in question is checking whether the object it is in contact with is aligned with its own axis. It does this by calculating the scalar product of the two objects' vectors. The scalar product of two vectors is a measure of how aligned they are. If the scalar product is zero, then the vectors are orthogonal, or perpendicular to each other. If the scalar product is positive, then the vectors are pointing in the same direction. If the scalar product is negative, then the vectors are pointing in opposite directions.
+
+![scalar](/images/scalara.png)
+
+```c++
+//if is other of player and cat
+if (OtherActor->Tags.Num() != 0) {
+	if (OtherActor->Tags[0] == FName("Player") || OtherActor->Tags[0] == FName("Cat")) {
+		return;
+	}
+}
+if (OtherActor != this->GetOwner()) {
+	if (state == StateAction::Resizing)
+	{
+		FVector dir;
+		FVector dir_2;
+
+		//single direction
+		if (countertouch == 0) {
+			OtherActorTouched = OtherActor;
+			if (FVector::Dist(this->GetOwner()->GetActorLocation(), Hit.ImpactPoint) > 0.1f) {
+				dir = this->GetOwner()->GetActorLocation() - Hit.ImpactPoint;
+				dir.Normalize();
+				countertouch++;
+			}
+		}
+		else {
+			if(OtherActorTouched != OtherActor){
+				DrawDebugSphere(this->GetWorld(), Hit.ImpactPoint, 10, 16, FColor::Red, false, 10);
+				dir_2 = this->GetOwner()->GetActorLocation() - Hit.ImpactPoint;
+				dir_2.Normalize();
+				if (FVector::Dist(this->direction, dir_2) >= 0.15f) {
+					countertouch++;
+				}
+			}
+		}
+
+		//multiple direction
+		float dotResult = 0;
+
+		if (countertouch == 1) {
+			if (this->direction == FVector::ZeroVector) {
+				this->direction = dir;
+			}
+		}
+		if (countertouch == 2) {
+			if (dir_2 != FVector::ZeroVector) {
+				dotResult = FVector::DotProduct(this->direction, dir_2);
+			}
+		}
+
+		if (countertouch == 2) {
+
+			if (dotResult < 0.8f && dotResult > -0.8f) {
+				this->direction += dir_2;
+				this->direction /= sqrt(2);
+			}
+			if (dotResult >= 0.8f || dotResult <= -0.8f) {
+				if (isLittle)
+				{
+					size = +1;
+					isLittle = false;
+				}
+				else
+				{
+					size = -1;
+					isLittle = true;
+				}
+				state = StateAction::Impossible;
+			}
+		}
+	}
+}
+```
+
+![TestResizing](/gif/ResizingObjectV2.gif)
 
 #### Falling phase (Success)
 
