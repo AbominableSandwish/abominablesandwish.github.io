@@ -45,12 +45,12 @@ The two protagonists can interact with certain objects, each with their own spec
 ### Enlargement/Shrinking phase
 
 This is a state machine that manages the resizing of objects in order to have total control over their animation.
-![Resizing](public/gif/Resizing.gif)
+![Resizing](/gif/Resizing.gif)
 
 #### Elevating phase
 
 First, the elevation raises the object a few centimeters to simulate a magic manipulation.
-![Elevating](public/gif/Elevating.gif)
+![Elevating](/gif/Elevating.gif)
 
 ```c++
   FTransform transf = (this->GetOwner()->GetTransform());
@@ -77,7 +77,7 @@ First, the elevation raises the object a few centimeters to simulate a magic man
 #### Deformation phase
 
 Manipulates the vertices of the object to improve the simulation of a magic spell.
-![Deformation](public/gif/deformation.gif)
+![Deformation](/gif/deformation.gif)
 
 ```c++
 	FTransform transf = (this->GetOwner()->GetTransform());
