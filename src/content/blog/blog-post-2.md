@@ -36,6 +36,8 @@ The cat from the dream world has the power to modify the physical and subatomic 
 
 The girl can climb on the enlarged objects and pick up the objects shrunk by our ball of fur.
 
+## sensor system
+
 ## Objects, cubes, the boat, the key, and others...
 
 The two protagonists can interact with certain objects, each with their own specific powers, in order to sometimes collect and use them to continue the level:
