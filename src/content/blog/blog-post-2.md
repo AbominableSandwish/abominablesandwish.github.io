@@ -47,12 +47,9 @@ The two protagonists can interact with certain objects, each with their own spec
 ### Enlargement/Shrinking phase
 
 This is a state machine that manages the resizing of objects in order to have total control over their animation.
+![TestResizing](/gif/ResizingObjectV2.gif)
 
-```c++
-
-```
-
-### Elevating phase
+#### Elevating phase
 
 First, the elevation raises the object a few centimeters to simulate a magic manipulation.
 
@@ -78,7 +75,7 @@ First, the elevation raises the object a few centimeters to simulate a magic man
 	}
 ```
 
-### Deformation phase
+#### Deformation phase
 
 Manipulates the vertices of the object to improve the simulation of a magic spell.
 
@@ -94,7 +91,7 @@ Manipulates the vertices of the object to improve the simulation of a magic spel
 	}
 ```
 
-### Resizing phase
+#### Resizing phase
 
 The main phase is the resizing, during which the object must check if any objects are obstructing its transformation. If so, it moves in the opposite direction. If the objects are on the same axis, then the object is blocked between two others and it abandons its transformation and returns to its initial size for safety.
 
@@ -159,7 +156,7 @@ if (isFinished)
 }
 ```
 
-### Falling phase (Success)
+#### Falling phase (Success)
 
 Once this step is complete, it goes through the phase where its physical state is reset so that it can fall with gravity.
 
@@ -177,7 +174,7 @@ Once this step is complete, it goes through the phase where its physical state i
 	}
 ```
 
-### Abording phase
+#### Abording phase
 
 ```c++
 FTransform transf = (this->GetOwner()->GetTransform());
