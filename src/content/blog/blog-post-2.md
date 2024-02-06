@@ -289,13 +289,25 @@ if (isFinished) {
 }
 ```
 
-### Diffulties
+### Difficulties Encountered
 
-The resizing of objects was difficult due to the lack of knowledge of the physics engine.
+The resizing of objects was difficult due to the lack of knowledge of the physics engine. If an object has multiple components and you enable gravity, the object in the air may not be affected by gravity and will remain immobile. This is because the different components of the object may be interacting with each other in a way that cancels out the effects of gravity.
+
+To solve this problem, you can add a force to the object just after activating its physics. This force will be enough to overcome the interactions between the different components of the object and cause the object to react to gravity in the correct way.
+
+```c++
+	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->SetSimulatePhysics(true);
+	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->SetEnableGravity(true);
+	this->GetOwner()->GetComponentByClass<UPrimitiveComponent>()->AddForce(FVector::UpVector);
+```
 
 ## The Boat
 
 The boat's only purpose is to block the players halfway through and to be an object of our puzzle that offers the ability to move only on the water in order to unlock other parts of the levels.
+
+the object in question has a ray-cast detection system that allows it to identify all the objects that are relatively close to it. If one of these objects has a tag defined as "docks", then the object will activate the action that allows you to get off the vehicle.
+
+![Boat](/gif/PawnBoat3.gif)
 
 ## The Dropper
 
