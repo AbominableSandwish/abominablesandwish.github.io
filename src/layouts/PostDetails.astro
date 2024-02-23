@@ -24,6 +24,11 @@ const {
   pubDatetime,
   modDatetime,
   tags,
+  canPlaying,
+  srcToPlay,
+  hrefToPlay,
+  width,
+  height
 } = post.data;
 
 const { Content } = await post.render();
@@ -98,8 +103,10 @@ const layoutProps = {
       </button>
       <ShareLinks />
     </div>
-    <iframe frameborder="0" src="https://itch.io/embed-upload/1851398?color=bdfeff" allowfullscreen="" width="400" height="720"><a href="https://demonskiddy.itch.io/snow-factory">Play Snow Factory on itch.io</a></iframe>
-  </main>
+    { canPlaying  ? (
+      <iframe frameborder="0" src={srcToPlay.toString()} allowfullscreen="" width={width} height={height}><a href={hrefToPlay.toString()}>Play Snow Factory on itch.io</a></iframe>
+    ) : "" }
+    </main>
   <Footer />
 </Layout>
 

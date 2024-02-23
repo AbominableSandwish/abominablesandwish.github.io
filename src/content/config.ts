@@ -36,7 +36,11 @@ const blog = defineCollection({
       godot: z.boolean().optional(),
       onSteam: z.string().optional(),
       onItchio: z.string().optional(),
-      linkToPlay: z.string().optional()
+      canPlaying: z.boolean(),
+      srcToPlay: z.string().optional(),
+      hrefToPlay: z.string().optional(),
+      width: z.number().optional(),
+      height: z.number().optional()
     }),
 });
 

@@ -10,4 +10,5 @@ tags:
 description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
 info:
   - Scholar
+canPlaying: false
 ---

@@ -17,4 +17,5 @@ time: 48 Hours
 unity: true
 unreal: false
 godot: false
+canPlaying: false
 ---
