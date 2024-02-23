@@ -4,7 +4,7 @@ pubDatetime: 2024-01-22T15:28:34.737Z
 title: Blog Post 2
 slug: blog-post-2
 featured: false
-ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+ogImage: images/sae_institute_genve_cover.jpg
 tags:
   - release
 description: Balancing mechanics is the key to a balanced game. The foundation is our characters, who must be able to complement each other perfectly through different abilities and powers. Obsolete powers should be avoided in order to prevent one character from being denigrated. Specific tests should be set up for each mechanic, both for its specific stability and for the stability of all mechanics together. These tests should be used to propose a variety of puzzles to ensure that the game mechanics work throughout the production phase.
