@@ -8,6 +8,9 @@ ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2
 tags:
   - release
 description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+
+furtherInfo: false
+
 info:
   - Scholar
 canPlaying: false

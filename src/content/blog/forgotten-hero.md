@@ -11,6 +11,8 @@ tags:
 info:
   - Camera - World Design - Graphic Prog
 description: In the morning, he was awaken by the noise of the starting machinery but it was too late. Pete is now on the end of the line, running for his life to avoid burning in the incinerator.
+
+furtherInfo: true
 time: 48 Hours
 unity: true
 unreal: false

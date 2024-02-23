@@ -8,6 +8,9 @@ ogImage: images/BlogpostBackgroundx300.png
 tags:
   - Sae-Institut
 description: Here, you will find the key aspects and different analyses to highlight about the behavior and design of a camera in order to offer an adapted experience to guide the players wisely, the principles not to be neglected throughout a project and the chosen solutions.
+
+furtherInfo: false
+
 info:
   - Scholar
 canPlaying: false

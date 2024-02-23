@@ -12,6 +12,8 @@ info:
   - 3C
   - Level Design
 description: Play a baby bird that has just been pushed from its nest by its brothers and sisters. Your goal is to go up the tree to regain your nest, and defeat your siblings.
+
+furtherInfo: true
 teamsize: 11
 time: 3 Months
 unity: true

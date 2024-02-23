@@ -13,6 +13,8 @@ info:
   - 3C
   - Level Prog
 description: An astronaut which has to repaire his ship from damages cause by traveling through the dangers of space. The goal is to survive for as much time as possible!
+
+furtherInfo: true
 time: 48 Hours
 unity: true
 unreal: false

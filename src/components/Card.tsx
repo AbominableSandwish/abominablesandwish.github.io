@@ -16,6 +16,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
     pubDatetime,
     modDatetime,
     description,
+    furtherInfo,
     ogImage,
     teamsize,
     info,
@@ -40,7 +41,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           <img src={ogImage?.toString()} height="150px"></img>
         </center>
       </div>
-      <div id="description_post">
+      <div id={ furtherInfo ? "description_post": "description_post_full"}>
         <a
           href={href}
           className="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
@@ -57,7 +58,8 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           <p>{info.map((value, index) => "- " + info[index] + " ")}</p>
         </div>
       </div>
-      <div id="content_post">
+
+      <div id={ furtherInfo ? "content_post" : "content_post_empty"}>
         {teamsize ? (
           <div id="sub_content">
             {teamsize === 1 ? (

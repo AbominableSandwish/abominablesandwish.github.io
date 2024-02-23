@@ -149,6 +149,12 @@
   height: 200px;
 }
 
+#description_post_full{
+  margin-top: 4%;
+  float: left;
+  height: 200px;
+}
+
 #content_post{
   margin-bottom: 2%;
   float: right;
@@ -156,9 +162,18 @@
   height: 25px;
 }
 
+#content_post_empty{
+  margin-bottom: 0%;
+  float: right;
+  width: 0%;
+  height: 25px;
+}
+
+
 #sub_content{
   width: 100%;
 }
+
 
 @media(min-width: 884px){
   
@@ -170,7 +185,7 @@
     float: left;
     width: 32%;
   }
-  
+
   #description_post{
     margin-top: 0%;
     margin-left: 2%;
@@ -192,6 +207,14 @@
     margin-left: 2%;
     float: left;
     width: 13%;
+    height: 100%;
+  }
+
+  #content_post_empty{
+    margin-bottom: 0%;
+    margin-left: 0%;
+    float: left;
+    width: 0%;
     height: 100%;
   }
   

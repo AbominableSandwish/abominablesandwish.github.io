@@ -25,7 +25,8 @@ const blog = defineCollection({
         .or(z.string())
         .optional(),
       description: z.string(),
-      descriptionMore: z.boolean().optional(),
+      
+      furtherInfo: z.boolean(),
       specificinity: z.string().optional(),
       canonicalURL: z.string().optional(),
       teamsize: z.number().optional(),
@@ -36,6 +37,7 @@ const blog = defineCollection({
       godot: z.boolean().optional(),
       onSteam: z.string().optional(),
       onItchio: z.string().optional(),
+
       canPlaying: z.boolean(),
       srcToPlay: z.string().optional(),
       hrefToPlay: z.string().optional(),

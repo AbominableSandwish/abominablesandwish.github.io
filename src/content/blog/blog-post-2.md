@@ -8,6 +8,9 @@ ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2
 tags:
   - release
 description: Balancing mechanics is the key to a balanced game. The foundation is our characters, who must be able to complement each other perfectly through different abilities and powers. Obsolete powers should be avoided in order to prevent one character from being denigrated. Specific tests should be set up for each mechanic, both for its specific stability and for the stability of all mechanics together. These tests should be used to propose a variety of puzzles to ensure that the game mechanics work throughout the production phase.
+
+furtherInfo: false
+
 info:
   - Scholar
 canPlaying: false
