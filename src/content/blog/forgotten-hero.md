@@ -15,4 +15,5 @@ time: 48 Hours
 unity: true
 unreal: false
 godot: false
+linkToPlay: https://html-classic.itch.zone/html/2406916/ForgotenHeroWebGL/index.html
 ---
