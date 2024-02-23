@@ -16,7 +16,7 @@ unity: true
 unreal: false
 godot: false
 canPlaying: true
-srcToPlay: https://itch.io/embed/678922
+srcToPlay: https://html-classic.itch.zone/html/2406916/ForgotenHeroWebGL/index.html
 hrefToPlay : https://cchambaz.itch.io/forgotenhero
 width: 980
 height: 668
