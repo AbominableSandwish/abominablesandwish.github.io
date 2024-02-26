@@ -51,12 +51,6 @@ const layoutProps = {
 };
 
 var iframe_play = false;
-
-<script>
- function Play() {
-  iframe_play = true
- }
-</script>
 ---
 
 <Layout {...layoutProps}>
@@ -202,4 +196,9 @@ var iframe_play = false;
   }
   backToTop();
   document.addEventListener("astro:after-swap", backToTop);
+  
+ function Play() {
+  iframe_play = true
+ }
+
 </script>
