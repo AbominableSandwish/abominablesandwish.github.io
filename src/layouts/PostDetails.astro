@@ -50,7 +50,7 @@ const layoutProps = {
   scrollSmooth: true,
 };
 
-var iframe_play = false;
+var iframe_play = false;  
 ---
 
 <Layout {...layoutProps}>
@@ -88,14 +88,10 @@ var iframe_play = false;
     <ul class="my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
     </ul>
-
-   
     { 
-      canPlaying  ? 
-        iframe_play ? ( 
-          <iframe frameborder="0" src={srcToPlay.toString()} allowfullscreen="" width={width} height={height}><a href={hrefToPlay.toString()}>Play Snow Factory on itch.io</a></iframe>
+      canPlaying  ? (
+          <iframe style="display: none;" id="PlayIframe" hidden frameborder="0" src={srcToPlay.toString()} allowfullscreen="" width={width} height={height}><a href={hrefToPlay.toString()}>Play Snow Factory on itch.io</a></iframe>
         ) : (<button id="play-btn"  onclick="Play()">Play</button>)
-      : ""
     }
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
@@ -196,9 +192,10 @@ var iframe_play = false;
   }
   backToTop();
   document.addEventListener("astro:after-swap", backToTop);
-  
- function Play() {
-  iframe_play = true
- }
+
+            
+  function Play() {
+        document.getElementById("PlayIframe").style.display = "block";
+      }
 
 </script>
