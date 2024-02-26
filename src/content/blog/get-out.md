@@ -20,5 +20,9 @@ time: 48 Hours
 unity: true
 unreal: false
 godot: false
-canPlaying: false
+canPlaying: true
+srcToPlay: https://itch.io/embed-upload/9788651
+hrefToPlay : https://formicarufa.itch.io/get-out
+width: 980
+height: 668
 ---
