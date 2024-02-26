@@ -19,5 +19,9 @@ time: 48 Hours
 unity: true
 unreal: false
 godot: false
-canPlaying: false
+canPlaying: true
+srcToPlay: https://itch.io/embed-upload/9810934
+hrefToPlay : https://abominable-science.itch.io/space-panic
+width: 980
+height: 668
 ---
