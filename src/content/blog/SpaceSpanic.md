@@ -25,3 +25,7 @@ hrefToPlay : https://abominable-science.itch.io/space-panic
 width: 980
 height: 668
 ---
+
+<p>Space Panic</b> is a mini-game designed during the Global Game Jam, from January 31, 2020, with the theme of the competition: "Space". A perfectly balanced team of 2 programmers, 2 Game Artists and an Audio Designer. In this Media, you will play as a little astronaut in her spaceship, alas piloted by an artificial intelligence that does not take into account the asteroids on its path. Your mission is to constantly repair all the damage (fire, hole in the hull) of your ship.
+
+My impact on this project, Gameplay programmer, where I actively developed the core of the gameplay: the control of the character and the interactivity with the rooms of the ship!
