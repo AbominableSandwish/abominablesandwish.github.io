@@ -1,7 +1,7 @@
 ---
 author: Dylan von Arx
 pubDatetime: 2024-01-22T15:45:34.737Z
-title: Forgotten Hero
+title: Forgot(t)en Hero
 slug: forgotten-hero-game
 featured: true
 ogImage: images/ForgottenHero3.gif
