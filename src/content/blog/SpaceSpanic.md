@@ -15,6 +15,7 @@ info:
 description: An astronaut which has to repaire his ship from damages cause by traveling through the dangers of space. The goal is to survive for as much time as possible!
 
 furtherInfo: true
+teamsize: 5
 time: 48 Hours
 unity: true
 unreal: false
@@ -22,6 +23,7 @@ godot: false
 canPlaying: true
 srcToPlay: https://itch.io/embed-upload/9810934
 hrefToPlay : https://abominable-science.itch.io/space-panic
+onItchio: https://abominable-science.itch.io/space-panic
 width: 980
 height: 668
 ---
