@@ -177,6 +177,9 @@
 
 #LogoHeader{
   float: left;
+}
+
+#LogoHeader.img{
   width: 32;
   height: 32;
 }
