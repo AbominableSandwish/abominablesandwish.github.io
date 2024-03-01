@@ -175,6 +175,16 @@
   float: left;
 }
 
+#LogoHeader{
+  float: left;
+  width: 32;
+  height: 32;
+}
+
+#TitleHeader{
+  float: left;
+}
+
 
 @media(min-width: 884px){
   
