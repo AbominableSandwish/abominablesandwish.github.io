@@ -175,16 +175,16 @@
   float: left;
 }
 
-#LogoHeader{
+#logoHeader{
   float: left;
 }
 
-#LogoHeader.img{
+#logoHeader.img{
   width: 32;
   height: 32;
 }
 
-#TitleHeader{
+#titleHeader{
   float: left;
 }
 
