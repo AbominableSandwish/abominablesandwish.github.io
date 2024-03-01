@@ -57,7 +57,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       </div>
 
       <div id={ furtherInfo ? "content_post" : "content_post_empty"}>
-      {teamsize ? (
+        { teamsize ? (
           <div id="sub_content">
             {teamsize === 1 ? (
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -122,6 +122,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           ) : (
             ""
           ) }
+
           {unreal ? (
             <div id="sub_content">
               <svg
@@ -137,7 +138,8 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           ) : (
             ""
           )}
-            {godot ? (
+
+          {godot ? (
               <div id="sub_content">
                 <svg
                   height="1024"
@@ -170,11 +172,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
               </div>
             ) : (
               ""
-            )}
-          </div>
-        ) : (
-          ""
-        )}
+          )}
 
         {specificinity ? (
           <div id="sub_content">
