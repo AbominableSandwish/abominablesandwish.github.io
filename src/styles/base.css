@@ -171,7 +171,8 @@
 
 
 #sub_content{
-  width: 100%;
+  min-width: 10%;
+  float: left;
 }
 
 
@@ -195,8 +196,7 @@
   }
 
   #sub_content{
-    min-width: 10%;
-    float: left;
+    width: 100%;
   }
     
   #description_post_full{
