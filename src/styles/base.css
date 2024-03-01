@@ -176,10 +176,6 @@
 }
 
 #logoHeader{
-  float: left;
-}
-
-#logoHeader.img{
   width: 32;
   height: 32;
 }

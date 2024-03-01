@@ -15,24 +15,29 @@ const { activeNav } = Astro.props;
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a id="logoHeader" href="/" class="logo whitespace-nowrap">
-        {
-          LOGO_IMAGE.enable ? (
-            <img
-              src={`/assets/${LOGO_IMAGE.svg ? "logox64.svg" : "logox64.png"}`}
-              alt={SITE.title}
-              width={LOGO_IMAGE.width}
-              height={LOGO_IMAGE.height}
-            />
+      <div id="divLogoHeader">
+        <a  href="/" class="logo whitespace-nowrap">
+          {
+            LOGO_IMAGE.enable ? (
+              <img
+                id="logoHeader"
+                src={`/assets/${LOGO_IMAGE.svg ? "logox64.svg" : "logox64.png"}`}
+                alt={SITE.title}
+                width={LOGO_IMAGE.width}
+                height={LOGO_IMAGE.height}
+              />
          
-          ) : (
-            SITE.title
-          )
-        }
-      </a>
-      <a id="titleHeader" href="/" class="logo whitespace-nowrap">
-      Abominable Science
-      </a>
+            ) : (
+              SITE.title
+            )
+          }
+        </a>
+      </div>
+      <div id="titleHeader">
+        <a  href="/" class="logo whitespace-nowrap">
+        Abominable Science
+        </a>
+      </div>
       <nav id="nav-menu">
         <button
           class="hamburger-menu focus-outline"
