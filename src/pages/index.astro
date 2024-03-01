@@ -11,7 +11,6 @@ import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 
 const posts = await getCollection("blog");
-
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
@@ -132,8 +131,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <center id="BannerHead" style="width: 100%; left: 0px; top: 0px; ">
         <img
           id="BannerHead" 
-          data-src="./images/Banner.png"
-          data-image="./images/Banner.png"
+          data-src="./images/Banner.jpg"
+          data-image="./images/Banner.jpg"
           data-image-dimensions="1580x500"
           data-image-focal-point="0.5,0.5"
           class="custom-fallback-image loaded"
@@ -142,7 +141,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           style="left: -692px; top: 0px; width: 3304px;"
           alt="Banner.png"
           data-image-resolution="2500w"
-          src="./images/Banner.png?format=2500w"
+          src="./images/Banner.jpg?format=2500w"
         />
         <iframe
           class="loading"
