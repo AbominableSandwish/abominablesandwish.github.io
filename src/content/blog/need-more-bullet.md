@@ -4,7 +4,7 @@ pubDatetime: 2024-01-22T15:46:34.737Z
 title: Need More Bullet
 slug: need-more-bullet
 featured: true
-ogImage: images/NMB_plaing.gif
+ogImage: gif/NMB_plaing.gif
 ogBanner: images/bannerNMB.png
 tags:
   - Game Jam
@@ -40,7 +40,7 @@ Objective: Functional prototype to compete with teams of 5
 
 <b>Roles and Contributions</b>
 
-    Tech Art and Gameplay Programmer
+Tech Art and Gameplay Programmer
 
 - Created menus (main, score, about) and user interfaces
 - Integrated audio system (music, sound effects, interface sounds)

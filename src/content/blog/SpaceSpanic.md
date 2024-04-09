@@ -30,11 +30,15 @@ height: 668
 
 # Space Panic
 
+<b>Project Summary</b>
+
 <b>Space Panic</b> is a mini-game designed during the Global Game Jam, from January 31, 2020, with the theme of the competition: "Space". A perfectly balanced team of 2 programmers, 2 Game Artists and an Audio Designer. In this Media, you will play as a little astronaut in her spaceship, alas piloted by an artificial intelligence that does not take into account the asteroids on its path. Your mission is to constantly repair all the damage (fire, hole in the hull) of your ship.
 
 My impact on this project, Gameplay programmer, where I actively developed the core of the gameplay: the control of the character and the interactivity with the rooms of the ship!
 
-<b>Gameplay Programmer</b>
+<b>Roles and Contributions</b>
+
+Gameplay Programmer
 
 - Added asteroid generator and detection system with the shuttle.
 - Added planet generator to flesh out the space background.
@@ -43,12 +47,12 @@ My impact on this project, Gameplay programmer, where I actively developed the c
 - Added scoring system, win when repairing hull breaches and extinguishing fires.
 - Added movement system and game mechanics.
 
-<b>Tech Art</b>
+Tech Art
 
-Integrated the artists' content (characters, scenery, background, music),
-Added character animations, (Idle, Walk, Climb, Repair, Fire).
-Enhanced the scenery with particle generators to bring the rocket to life (front and back of the rocket and extinguisher jet).
-Implemented menus (Main menu, about, Score menu).
+- Integrated the artists' content (characters, scenery, background, music),
+- Added character animations, (Idle, Walk, Climb, Repair, Fire).
+- Enhanced the scenery with particle generators to bring the rocket to life (front and back of the rocket and extinguisher jet).
+- Implemented menus (Main menu, about, Score menu).
 
 <b>Difficulties Encountered</b>
 

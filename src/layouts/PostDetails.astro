@@ -88,13 +88,14 @@ var iframe_play = false;
     <ul class="my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
     </ul>
-    { 
-      canPlaying  ? (
-          <iframe style="display: none;" id="PlayIframe" hidden frameborder="0" src={srcToPlay.toString()} allowfullscreen="" width={width} height={height}><a href={hrefToPlay.toString()}>Play Snow Factory on itch.io</a></iframe>
-          <button id="play-btn"  onclick="Play()">Play</button>
-        ) : ""
-    }
-
+    <div id="iframeforplay">
+      { 
+        canPlaying  ? (
+            <iframe style="display: none;" id="PlayIframe" hidden frameborder="0" src={srcToPlay.toString()} allowfullscreen="" width={width} height={height}><a href={hrefToPlay.toString()}>Play Snow Factory on itch.io</a></iframe>
+            <button id="play-btn"  onclick="Play()">Play</button>
+          ) : ""
+      }
+    </div>
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
     >
@@ -197,9 +198,17 @@ var iframe_play = false;
 
             
   function Play() {
-        document.getElementById("PlayIframe").style.display = "block";
         document.getElementById("play-btn").style.display = "none";
         
+        const node = document.createElement("iframegame");
+        node.style.display = "none";
+        node.style.id = "PlayIframe";
+        node.style.frameborder = "0";
+        node.style.src = srcToPlay.toString();
+        node.allowFullscreen = "";
+        node.width = width;
+        node.height= height;
+        document.getElementById("iframeforplay").appendChild(node);
       }
 
 </script>
