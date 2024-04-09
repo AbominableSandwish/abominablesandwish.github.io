@@ -91,7 +91,7 @@ var iframe_play = false;
     <div id="iframeforplay">
       { 
         canPlaying  ? (
-            <button id="play-btn"  onclick="Play()">Play</button>
+            <button id="play-btn"  onclick="Play()" class={srcToPlay?.toString() + " " + width + " " + height} >Play</button>
           ) : ""
       }
     </div>
@@ -198,17 +198,19 @@ var iframe_play = false;
   var srcPlay = srcToPlay.toString();
             
   function Play() {
-        document.getElementById("play-btn").style.display = "none";
+       
         
         const node = document.createElement("iframe");
         node.style.display = "none";
         node.style.id = "PlayIframe";
         node.style.frameborder = "0";
-        node.style.src = srcPlay;
+        node.style.src =  document.getElementById("play-btn").classList(0);
         node.allowFullscreen = "";
         node.width = width;
         node.height= height;
         document.getElementById("iframeforplay").appendChild(node);
+
+        document.getElementById("play-btn").style.display = "none";
       }
 
 </script>
