@@ -32,16 +32,16 @@ In One Piu Day, you play as a baby bird that has just been pushed from its nest 
 
 <b>Lead Programmer's Contributions</b>
 
-    Implemented camera behavior
-    Added controller and character behavior
-    Integrated diegetic UI
-    Added collectible objects
-    Implemented scene transition systems and cinematic movement
-    Added various platforms (trampoline mushrooms, simple platform mushrooms, branches)
-    Created a particle system
-    Added sound effects and music
-    Integrated animations
-    Implemented the caterpillar quest
+- Implemented camera behavior
+- Added controller and character behavior
+- Integrated diegetic UI
+- Added collectible objects
+- Implemented scene transition systems and cinematic movement
+- Added various platforms (trampoline mushrooms, simple platform mushrooms, branches)
+- Created a particle system
+- Added sound effects and music
+- Integrated animations
+- Implemented the caterpillar quest
 
 <b>Difficulties Encountered</b>
 

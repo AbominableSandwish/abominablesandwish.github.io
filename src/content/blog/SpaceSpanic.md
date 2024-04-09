@@ -28,7 +28,7 @@ width: 980
 height: 668
 ---
 
-# Need more bullet
+# Space Panic
 
 <b>Space Panic</b> is a mini-game designed during the Global Game Jam, from January 31, 2020, with the theme of the competition: "Space". A perfectly balanced team of 2 programmers, 2 Game Artists and an Audio Designer. In this Media, you will play as a little astronaut in her spaceship, alas piloted by an artificial intelligence that does not take into account the asteroids on its path. Your mission is to constantly repair all the damage (fire, hole in the hull) of your ship.
 
@@ -52,13 +52,15 @@ Implemented menus (Main menu, about, Score menu).
 
 <b>Difficulties Encountered</b>
 
-    The room system was the most complex, the desire to create a "on fire" summer,
-    the goal was to simulate flames that grow and spread to other rooms
-    as well as the game was designed to be a two-player cooperative game, but with the complexity of the controller system,
-    this part was unfortunately approached as a simple solo mini-game
+The room system was the most complex, the desire to create a "on fire" summer,
+the goal was to simulate flames that grow and spread to other rooms
+as well as the game was designed to be a two-player cooperative game, but with the complexity of the controller system,
+this part was unfortunately approached as a simple solo mini-game
 
 <b>Personal Experience</b>
 
-    Having participated in a project with people more experienced than me was very enriching and a good pressure to keep up with the pace of game production.
-    Succeeding in releasing a functional mini-game because I still had the difficulty of defining a scope perfectly adapted to finish a project or/and to be able to even polish
-    at best in the time allotted during a competition or a real production. Important point: a good mechanic only!
+Having participated in a project with people more experienced than me was very enriching and a good pressure to keep up with the pace of game production.
+Succeeding in releasing a functional mini-game because I still had the difficulty of defining a scope perfectly adapted to finish a project or/and to be able to even polish
+at best in the time allotted during a competition or a real production. Important point: a good mechanic only!
+
+<b>Thank you!</b>
