@@ -198,7 +198,7 @@ var iframe_play = false;
   function Play() {
     document.getElementById("play-btn").style.display = "none";
     
-    var playsrc = document.getElementById("play-btn").classList(0).toString();
+    var playsrc = document.getElementById("play-btn").classList.item(0);
 
     const node = document.createElement("iframe");
     node.style.display = "none";
