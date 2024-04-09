@@ -199,15 +199,15 @@ var iframe_play = false;
     document.getElementById("play-btn").style.display = "none";
     
     var playsrc = document.getElementById("play-btn").classList(0).toString();
-    
+
     const node = document.createElement("iframe");
     node.style.display = "none";
     node.style.id = "PlayIframe";
     node.style.frameborder = "0";
     node.style.src = playsrc;
     node.allowFullscreen = "";
-    node.width = width;
-    node.height= height;
+    //node.width = width;
+    //node.height= height;
     document.getElementById("iframeforplay").appendChild(node);    
   }
 
