@@ -91,7 +91,6 @@ var iframe_play = false;
     <div id="iframeforplay">
       { 
         canPlaying  ? (
-            <iframe style="display: none;" id="PlayIframe" hidden frameborder="0" src={srcToPlay.toString()} allowfullscreen="" width={width} height={height}><a href={hrefToPlay.toString()}>Play Snow Factory on itch.io</a></iframe>
             <button id="play-btn"  onclick="Play()">Play</button>
           ) : ""
       }
