@@ -195,6 +195,7 @@ var iframe_play = false;
   backToTop();
   document.addEventListener("astro:after-swap", backToTop);
 
+  var srcPlay = srcToPlay.toString();
             
   function Play() {
         document.getElementById("play-btn").style.display = "none";
@@ -203,7 +204,7 @@ var iframe_play = false;
         node.style.display = "none";
         node.style.id = "PlayIframe";
         node.style.frameborder = "0";
-        node.style.src = srcToPlay.toString();
+        node.style.src = srcPlay;
         node.allowFullscreen = "";
         node.width = width;
         node.height= height;
