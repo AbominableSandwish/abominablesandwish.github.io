@@ -23,5 +23,6 @@ hrefToPlay: https://cchambaz.itch.io/forgotenhero
 width: 864
 height: 600
 
-hasVideo: false
+hasVideo: true
+srcVideo: https://www.youtube.com/embed/Wj2wzLsF_DA?si=yZwTFBOruCl6G9xY
 ---

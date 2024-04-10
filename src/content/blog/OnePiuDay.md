@@ -23,7 +23,8 @@ onSteam: https://store.steampowered.com/app/907220/One_Piu_Day/
 onItchio: https://formersungames.itch.io/one-piu-day
 canPlaying: false
 
-hasVideo: false
+hasVideo: true
+srcVideo: https://www.youtube.com/embed/OPD8VxXYFP4?si=O13g3UB0NvTgvqz0
 ---
 
 # One Piu Day
