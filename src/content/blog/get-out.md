@@ -26,6 +26,8 @@ hrefToPlay: https://formicarufa.itch.io/get-out
 onItchio: https://formicarufa.itch.io/get-out
 width: 980
 height: 668
+
+hasVideo: false
 ---
 
 <b>Project Summary</b>

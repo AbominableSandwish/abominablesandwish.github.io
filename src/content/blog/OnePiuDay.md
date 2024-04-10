@@ -22,6 +22,8 @@ godot: false
 onSteam: https://store.steampowered.com/app/907220/One_Piu_Day/
 onItchio: https://formersungames.itch.io/one-piu-day
 canPlaying: false
+
+hasVideo: false
 ---
 
 # One Piu Day

@@ -14,6 +14,8 @@ furtherInfo: false
 info:
   - Scholar
 canPlaying: false
+
+hasVideo: false
 ---
 
 ## Table of contents

@@ -26,6 +26,9 @@ hrefToPlay: https://abominable-science.itch.io/space-panic
 onItchio: https://abominable-science.itch.io/space-panic
 width: 980
 height: 668
+
+hasVideo: true
+srcVideo: https://www.youtube.com/embed/PWtzYdtyrEo?si=QHF_KSsj8ORZDdLi
 ---
 
 # Space Panic

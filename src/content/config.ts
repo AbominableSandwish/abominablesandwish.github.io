@@ -25,7 +25,7 @@ const blog = defineCollection({
         .or(z.string())
         .optional(),
       description: z.string(),
-      
+
       furtherInfo: z.boolean(),
       specificinity: z.string().optional(),
       canonicalURL: z.string().optional(),
@@ -42,7 +42,10 @@ const blog = defineCollection({
       srcToPlay: z.string().optional(),
       hrefToPlay: z.string().optional(),
       width: z.number().optional(),
-      height: z.number().optional()
+      height: z.number().optional(),
+
+      hasVideo: z.boolean(),
+      srcVideo: z.string().optional(),
     }),
 });
 
