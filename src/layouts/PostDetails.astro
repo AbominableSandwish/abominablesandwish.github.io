@@ -96,9 +96,9 @@ var iframe_play = false;
         canPlaying  ? (
             <h2 class="post-title">Game</h2>
             <button id="play-btn"  onclick="Play()" class={srcToPlay?.toString() + " " + width + " " + height} >Play</button>
+            <iframe id="PlayIframe" height="0"></iframe>
           ) : ""
       }
-      <iframe id="PlayIframe"></iframe>
     </div>
 
     <div id="iframeVideo">
