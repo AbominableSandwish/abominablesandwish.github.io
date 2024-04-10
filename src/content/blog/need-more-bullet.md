@@ -4,7 +4,7 @@ pubDatetime: 2024-01-22T15:46:34.737Z
 title: Need More Bullet
 slug: need-more-bullet
 featured: true
-ogImage: gif/NMB_plaing.gif
+ogImage: images/NMB_plaing.gif
 ogBanner: images/bannerNMB.png
 tags:
   - Game Jam
