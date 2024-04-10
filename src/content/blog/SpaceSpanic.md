@@ -31,17 +31,15 @@ hasVideo: true
 srcVideo: https://www.youtube.com/embed/PWtzYdtyrEo?si=QHF_KSsj8ORZDdLi
 ---
 
-# Space Panic
-
-<b>Project Summary</b>
+<h3 class="post-title">Project Summary</h3>
 
 <b>Space Panic</b> is a mini-game designed during the Global Game Jam, from January 31, 2020, with the theme of the competition: "Space". A perfectly balanced team of 2 programmers, 2 Game Artists and an Audio Designer. In this Media, you will play as a little astronaut in her spaceship, alas piloted by an artificial intelligence that does not take into account the asteroids on its path. Your mission is to constantly repair all the damage (fire, hole in the hull) of your ship.
 
 My impact on this project, Gameplay programmer, where I actively developed the core of the gameplay: the control of the character and the interactivity with the rooms of the ship!
 
-<b>Roles and Contributions</b>
+Roles and Contributions</h3>
 
-Gameplay Programmer
+<b>Gameplay Programmer</b>
 
 - Added asteroid generator and detection system with the shuttle.
 - Added planet generator to flesh out the space background.
@@ -50,21 +48,21 @@ Gameplay Programmer
 - Added scoring system, win when repairing hull breaches and extinguishing fires.
 - Added movement system and game mechanics.
 
-Tech Art
+<b>Tech Art</b>
 
 - Integrated the artists' content (characters, scenery, background, music),
 - Added character animations, (Idle, Walk, Climb, Repair, Fire).
 - Enhanced the scenery with particle generators to bring the rocket to life (front and back of the rocket and extinguisher jet).
 - Implemented menus (Main menu, about, Score menu).
 
-<b>Difficulties Encountered</b>
+<h3 class="post-title">Difficulties Encountered</h3>
 
 The room system was the most complex, the desire to create a "on fire" summer,
 the goal was to simulate flames that grow and spread to other rooms
 as well as the game was designed to be a two-player cooperative game, but with the complexity of the controller system,
 this part was unfortunately approached as a simple solo mini-game
 
-<b>Personal Experience</b>
+<h3 class="post-title">Personal Experience</h3>
 
 Having participated in a project with people more experienced than me was very enriching and a good pressure to keep up with the pace of game production.
 Succeeding in releasing a functional mini-game because I still had the difficulty of defining a scope perfectly adapted to finish a project or/and to be able to even polish
