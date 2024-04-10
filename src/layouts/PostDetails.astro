@@ -201,7 +201,7 @@ var iframe_play = false;
     
     var playsrc = document.getElementById("play-btn").classList.item(3);
     console.log(playsrc)
-    var node = document.getElementById("PlayIframe");
+    var node = document.getElementById("PlayIframe").style.src = playsrc;
     node.style.frameborder = "0";
     node.style.src = playsrc;
     node.allowFullscreen = "";
