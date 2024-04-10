@@ -93,6 +93,7 @@ var iframe_play = false;
     <div id="iframeforplay">
       { 
         canPlaying  ? (
+            <h2>Game</h2>
             <button id="play-btn"  onclick="Play()" class={srcToPlay?.toString() + " " + width + " " + height} >Play</button>
           ) : ""
       }
@@ -102,7 +103,8 @@ var iframe_play = false;
     <div id="iframeVideo">
       {
         hasVideo ? (
-        <iframe width="560" height="315" src={srcVideo?.toString()} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2>Video</h2>
+        <iframe width="864" height="486" src={srcVideo?.toString()} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         ) : ""
       }
       

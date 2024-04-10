@@ -24,8 +24,8 @@ canPlaying: true
 srcToPlay: https://itch.io/embed-upload/9788651
 hrefToPlay: https://formicarufa.itch.io/get-out
 onItchio: https://formicarufa.itch.io/get-out
-width: 980
-height: 668
+width: 864
+height: 600
 
 hasVideo: false
 ---
