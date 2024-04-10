@@ -5,7 +5,7 @@ title: Get Out!
 slug: get-out-game
 featured: true
 ogImage: images/BanierGetOut.gif
-ogBanner: images/GetOutBanner.png
+ogBanner: images/GetoutBanner.png
 tags:
   - Game Jam
 description: Get Out is a 2d platform fighting video game, multiplayer up to 4 players. The only rule, eject your opponent without being ejected.
