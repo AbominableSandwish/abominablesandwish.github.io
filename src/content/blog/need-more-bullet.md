@@ -72,10 +72,7 @@ Despite the lack of time to polish certain aspects, the LevelUp Game Jam project
 
 <b>Additional Information</b>
 
-The project was made during the 10th anniversary of the LevelUp Game Jam.
-The team decided to focus on the theme and create a shooter in a synthwave 80s atmosphere.
-The main programmer worked on the gameplay mechanics, while the tech art and gameplay programmer focused on the feedback, audio, and visual effects.
-The team learned the importance of balancing the gameplay after creating a functional prototype.
+The project was made during the 10th edition of the LevelUp Game Jam. The team decided to focus on the theme and create a shooter in a synthwave 80s atmosphere. The main programmers worked on the gameplay mechanics, while the tech art and gameplay programmer focused on the feedback, audio, and visual effects. The team learned the importance of keep the time for balancing the gameplay after creating a functional prototype.
 
 <b>Recommendations</b>
 

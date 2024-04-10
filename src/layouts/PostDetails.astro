@@ -94,6 +94,7 @@ var iframe_play = false;
             <button id="play-btn"  onclick="Play()" class={srcToPlay?.toString() + " " + width + " " + height} >Play</button>
           ) : ""
       }
+      <iframe id="PlayIframe"></iframe>
     </div>
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
@@ -200,8 +201,7 @@ var iframe_play = false;
     
     var playsrc = document.getElementById("play-btn").classList.item(3);
     console.log(playsrc)
-    var node = document.createElement("iframe").style.id = "PlayIframe";
-    node.style.id = "PlayIframe";
+    var node = document.getElementById("PlayIframe");
     node.style.frameborder = "0";
     node.style.src = playsrc;
     node.allowFullscreen = "";
