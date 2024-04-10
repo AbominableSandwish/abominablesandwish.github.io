@@ -200,13 +200,16 @@ var iframe_play = false;
     document.getElementById("play-btn").style.display = "none";
     
     var playsrc = document.getElementById("play-btn").classList.item(3);
+    var height = document.getElementById("play-btn").classList.item(1);
+    var width = document.getElementById("play-btn").classList.item(2)
+    
     console.log(playsrc)
-    console.log(document.getElementById("PlayIframe").setAttribute('src', playsrc));
-    node.style.frameborder = "0";
-    node.style.src = playsrc;
-    node.allowFullscreen = "";
-    //node.width = width;
-    //node.height= height;
+    var node = document.getElementById("PlayIframe");
+    node.setAttribute('src', playsrc);
+    node.setAttribute('frameborder', 0);
+    node.setAttribute('allowFullscreen', "");
+    node.setAttribute('width', width);
+    node.setAttribute('height', height);
     document.getElementById("iframeforplay").appendChild(node);    
   }
 
