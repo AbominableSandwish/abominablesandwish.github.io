@@ -27,7 +27,8 @@ onItchio: https://formicarufa.itch.io/get-out
 width: 864
 height: 600
 
-hasVideo: false
+hasVideo: true
+srcVideo: https://www.youtube.com/embed/xf2z48CnGp0?si=7vgOzWl5UODSfvpf
 ---
 
 The project was created during the 10th edition of the LevelUp Game Jam. The team decided to focus on the theme and create a shooter set in an 80s synthwave atmosphere. The main programmers worked on the game mechanics, while I had to concentrate on the audio and visual feedback. Our team is slightly smaller than the others in terms of the number of team members, so we'll have to work hard to compete with them.
