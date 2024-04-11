@@ -30,56 +30,34 @@ height: 600
 hasVideo: false
 ---
 
-LevelUp Game Jam: 10th Anniversary
+The project was created during the 10th edition of the LevelUp Game Jam. The team decided to focus on the theme and create a shooter set in an 80s synthwave atmosphere. The main programmers worked on the game mechanics, while I had to concentrate on the audio and visual feedback. Our team is slightly smaller than the others in terms of the number of team members, so we'll have to work hard to compete with them.
 
 <b>Project Summary</b>
 
-Team: 3 programmers from SAE Institute
-Theme: Reduction, Reuse, Recycling
-Secondary Constraints: Asynchronous multiplayer, Non-Euclidean
-Final Choice: Solo shooter in a synthwave 80s atmosphere
-Objective: Functional prototype to compete with teams of 5
+- Team: 3 programmers from SAE Institute
+- Theme: Reduction, Reuse, Recycling
+- Secondary Constraints: Asynchronous multiplayer, Non-Euclidean
+- Final Choice: Solo shooter in a synthwave 80s atmosphere
+- Objective: Functional prototype to compete with teams of 5
 
 <b>Roles and Contributions</b>
 
 Tech Art and Gameplay Programmer
 
-- Created menus (main, score, about) and user interfaces
-- Integrated audio system (music, sound effects, interface sounds)
-- Implemented enemy damage and death animations
-- Developed camera screenshake behavior
-- Designed smoke, spark, and bullet particles
+- Sound system creation
+- Transition between music
+- sound effects buffer system
+- volume management for different types of audio
+- Sound bank search and integration (musics, sound effects, sounds UI, voices)
 
-<b>Personal Experience</b>
-
-- Stimulating collaboration: A positive change after solo work
-- Increased motivation: Quick response to colleagues' requests and observation of the game coming to life
-- Lack of time: Insufficient balancing for optimal experience
-- Lesson learned: Prioritize balancing after creating a functional prototype
-
-<b>Strengths</b>
-
-Adherence to the main theme: Reduction, Reuse, Recycling
-Functional prototype: Gameplay, menus, sounds, visual effects
-Successful atmosphere: Immersive 80s synthwave
-
-<b>Areas for Improvement</b>
-
-Gameplay balancing: Long-term difficulty
-Better use of constraints: Asynchronous multiplayer and non-Euclidean
+- Added menus (main, score, about) and user interfaces
+- Added visual feedback when an enemy is attacked
+- Added visual feedback when an enemy is dead
+- Added screenshake when taking damage
+- Added smoke, spark, and bullet particles
 
 <b>Conclusion</b>
 
-Despite the lack of time to polish certain aspects, the LevelUp Game Jam project was an enriching experience. Team collaboration and the creation of a functional prototype were sources of motivation and satisfaction. The importance of balancing was also highlighted for an optimal gaming experience.
-
-<b>Additional Information</b>
-
-The project was made during the 10th edition of the LevelUp Game Jam. The team decided to focus on the theme and create a shooter in a synthwave 80s atmosphere. The main programmers worked on the gameplay mechanics, while the tech art and gameplay programmer focused on the feedback, audio, and visual effects. The team learned the importance of keep the time for balancing the gameplay after creating a functional prototype.
-
-<b>Recommendations</b>
-
-Teams should consider balancing the gameplay as early as possible.
-Teams should try to use all of the constraints given in the game jam.
-Teams should focus on creating a fun and engaging experience for the players.
+Despite the lack of time to polish certain aspects, the LevelUp Game Jam project was an enriching experience. Team collaboration and the creation of a functional prototype were sources of motivation and satisfaction. The importance of balancing was also highlighted for an optimal gaming experience in the next competition.
 
 <b>Thank you!</b>

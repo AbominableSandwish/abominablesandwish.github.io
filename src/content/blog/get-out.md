@@ -30,8 +30,33 @@ height: 600
 hasVideo: false
 ---
 
-<b>Project Summary</b>
+<h3>Project Summary</h3>
 
-Get Out! is a mini-game designed during the Level Up Jam, from February 13, 2020, with the main theme "Everything is breakable". An incomplete team of 3 programmers, This media is a 2d platform fighting video game, multiplayer up to 4 players. The only rule, eject your opponent without being ejected.
+- Game Jam: Level Up Jam
+- Theme: Everything is breakable
+- Team: 3 programmers
+- Genre: 2D platform fighting game
+- Multiplayer: Up to 4 players
+- Rule: Eject your opponents without being ejected yourself
 
-In this project, my work was to develop the entire set and level design, as well as the camera.
+<h3>Roles and Contributions</h3>
+
+<b>Gameplay Programming</b>
+
+- Added destructible walls when a player is ejected
+- Implemented camera behavior based on player position, distance, and center of the arena
+- Added a fall system for the tornado
+- Added a flashing effect that accelerates when an attack is charged
+- Added a red flashing effect when a player is attacked
+- Added a character image repeat effect when performing a charge
+
+<b>Tech Art</b>
+
+- Designed the different battle arenas
+- Integrated the sprites
+- Added the tornado (particle system) in the background
+- Researched and added the sound bank (music, sound effects, UI sounds)
+
+<h3>Personal Experience</h3>
+
+The prototype was operational within the first 24 hours of the jam, which allowed us to fine-tune the gameplay as much as possible. Most of the participants were able to give us their feedback until the end of the competition, which was a strength compared to other teams. Despite the small size of our team, we were able to compensate with productivity and win first place. Personal lesson: finish a prototype early in order to balance and polish it as much as possible!
