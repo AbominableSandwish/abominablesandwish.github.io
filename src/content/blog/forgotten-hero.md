@@ -18,6 +18,7 @@ unity: true
 unreal: false
 godot: false
 canPlaying: true
+onItchio: https://cchambaz.itch.io/forgotenhero
 srcToPlay: https://html-classic.itch.zone/html/2406916/ForgotenHeroWebGL/index.html
 hrefToPlay: https://cchambaz.itch.io/forgotenhero
 width: 864
