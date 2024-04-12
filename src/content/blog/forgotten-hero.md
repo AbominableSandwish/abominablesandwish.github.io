@@ -1,6 +1,6 @@
 ---
 author: Dylan von Arx
-pubDatetime: 2024-01-22T15:45:34.737Z
+pubDatetime: 2020-06-21T15:46:34.737Z
 title: Forgot(t)en Hero
 slug: forgotten-hero-game
 featured: true
