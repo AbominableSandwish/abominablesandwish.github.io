@@ -31,6 +31,7 @@ srcVideo: https://www.youtube.com/embed/Wj2wzLsF_DA?si=yZwTFBOruCl6G9xY
 After one busy day, he took a nap on a sweet conveyor belt at the factory. It was so comfy that he slept all night. In the morning, he was awaken by the noise of the starting machinery but it was too late. Pete is now on the end of the line, running for his life to avoid burning in the incinerator.!
 
 <h3 class="post-title">Project Summary</h3>
+
 Project during the Summer Jam organized at the Sae Institute, in June 2020, first game jam organized by our class and the other branches to test our skills directly in the field. For our team of 5 people, Objective: Experience to discover the principles of a game jam, no theme or constraint, simply design a game respecting the time limit.
 
 <h3 class="post-title">Roles and Contributions</h3>
