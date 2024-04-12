@@ -27,3 +27,36 @@ height: 600
 hasVideo: true
 srcVideo: https://www.youtube.com/embed/Wj2wzLsF_DA?si=yZwTFBOruCl6G9xY
 ---
+
+After one busy day, he took a nap on a sweet conveyor belt at the factory. It was so comfy that he slept all night. In the morning, he was awaken by the noise of the starting machinery but it was too late. Pete is now on the end of the line, running for his life to avoid burning in the incinerator.!
+
+<h3>Project Summary</h3>
+Project during the Summer Jam organized at the Sae Institute, in June 2020, first game jam organized by our class and the other branches to test our skills directly in the field. For our team of 5 people, Objective: Experience to discover the principles of a game jam, no theme or constraint, simply design a game respecting the time limit.
+
+<h3>Roles and Contributions</h3>
+
+<b> Gameplay Programmer </b>
+
+- Ajout du comportement de la caméra:
+  - Suvie du joueur sur l'axe x et y
+  - Rotation de la camera vers le bas dans la zone de danger.
+
+<b> Tech Art <b>
+
+- Creation de shader qui dessine de la lave procéduralement
+- Mise en places des menus (Menu Principale, à propos, Game over)
+- Création des animations des moteurs du convoyeurs
+
+Roles and Contributions
+
+Gameplay Programmer
+
+    Implemented camera behavior:
+        Followed the player on the x and y axes
+        Rotated the camera downwards in the danger zone
+
+Tech Artist
+
+    Created shaders to procedurally draw lava
+    Implemented menus (Main Menu, About, Game Over)
+    Created conveyor belt motor animations
