@@ -30,7 +30,7 @@ height: 600
 hasVideo: false
 ---
 
-<h3>Project Summary</h3>
+<h3 class="post-title">Project Summary</h3>
 
 - Game Jam: Level Up Jam
 - Theme: Everything is breakable
@@ -39,7 +39,7 @@ hasVideo: false
 - Multiplayer: Up to 4 players
 - Rule: Eject your opponents without being ejected yourself
 
-<h3>Roles and Contributions</h3>
+<h3 class="post-title">Roles and Contributions</h3>
 
 <b>Gameplay Programming</b>
 
@@ -57,6 +57,8 @@ hasVideo: false
 - Added the tornado (particle system) in the background
 - Researched and added the sound bank (music, sound effects, UI sounds)
 
-<h3>Personal Experience</h3>
+<h3 class="post-title">Personal Experience</h3>
 
 The prototype was operational within the first 24 hours of the jam, which allowed us to fine-tune the gameplay as much as possible. Most of the participants were able to give us their feedback until the end of the competition, which was a strength compared to other teams. Despite the small size of our team, we were able to compensate with productivity and win first place. Personal lesson: finish a prototype early in order to balance and polish it as much as possible!
+
+<b>Thank you!</b>

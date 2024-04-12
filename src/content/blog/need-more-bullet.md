@@ -33,7 +33,7 @@ srcVideo: https://www.youtube.com/embed/xf2z48CnGp0?si=7vgOzWl5UODSfvpf
 
 The project was created during the 10th edition of the LevelUp Game Jam. The team decided to focus on the theme and create a shooter set in an 80s synthwave atmosphere. The main programmers worked on the game mechanics, while I had to concentrate on the audio and visual feedback. Our team is slightly smaller than the others in terms of the number of team members, so we'll have to work hard to compete with them.
 
-<b>Project Summary</b>
+<h3 class="post-title">Project Summary</h3>
 
 - Team: 3 programmers from SAE Institute
 - Theme: Reduction, Reuse, Recycling
@@ -41,9 +41,9 @@ The project was created during the 10th edition of the LevelUp Game Jam. The tea
 - Final Choice: Solo shooter in a synthwave 80s atmosphere
 - Objective: Functional prototype to compete with teams of 5
 
-<b>Roles and Contributions</b>
+<h3 class="post-title">Roles and Contributions</h3>
 
-Tech Art and Gameplay Programmer
+<b>Tech Art and Gameplay Programmer</B>
 
 - Sound system creation
 - Transition between music
@@ -57,7 +57,7 @@ Tech Art and Gameplay Programmer
 - Added screenshake when taking damage
 - Added smoke, spark, and bullet particles
 
-<b>Conclusion</b>
+<h3 class="post-title">Personal Experience</h3>
 
 Despite the lack of time to polish certain aspects, the LevelUp Game Jam project was an enriching experience. Team collaboration and the creation of a functional prototype were sources of motivation and satisfaction. The importance of balancing was also highlighted for an optimal gaming experience in the next competition.
 

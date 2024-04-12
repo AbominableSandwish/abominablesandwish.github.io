@@ -37,7 +37,7 @@ srcVideo: https://www.youtube.com/embed/PWtzYdtyrEo?si=QHF_KSsj8ORZDdLi
 
 My impact on this project, Gameplay programmer, where I actively developed the core of the gameplay: the control of the character and the interactivity with the rooms of the ship!
 
-Roles and Contributions</h3>
+<h3 class="post-title">Roles and Contributions</h3>
 
 <b>Gameplay Programmer</b>
 
