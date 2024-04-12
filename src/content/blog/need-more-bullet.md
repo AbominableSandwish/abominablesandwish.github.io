@@ -20,10 +20,9 @@ time: 48 Hours
 unity: true
 unreal: false
 godot: false
-canPlaying: true
-srcToPlay: https://itch.io/embed-upload/9788651
-hrefToPlay: https://formicarufa.itch.io/get-out
-onItchio: https://formicarufa.itch.io/get-out
+canPlaying: false
+hrefToPlay: https://stowy.itch.io/need-more-bullets
+onItchio: https://stowy.itch.io/need-more-bullets
 width: 864
 height: 600
 
