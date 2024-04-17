@@ -1,6 +1,6 @@
 ---
 author: Dylan von Arx
-pubDatetime: 2020-04-15T15:46:34.737Z
+pubDatetime: 2024-04-15T15:46:34.737Z
 title: Agency Merlin - The Enchanted Feather
 slug: agency-merlin
 featured: true
@@ -8,20 +8,20 @@ ogImage: images/BannerAgencyMerlin.png
 ogBanner: images/BannerAgencyMerlin.png
 tags:
   - Game Jam
-description: Merlin a volatile magician, isolate very high in your Tower, the citizens and you mission is to be able to answer their requests using your magic. Beware your spells have consequences!
+description: Merlin a volatile magician, isolate very high in your Tower, the citizens and you mission is to be able to answer their requests using your magic.
 
 furtherInfo: true
 teamsize: 7
 info:
-  - Game Feel
-  - Camera
-  - Level Design
+  - Visual Feedback
+  - Ptich Modulation
+  - Gamplay
 time: 72 Hours
 unity: true
 unreal: false
 godot: false
 canPlaying: true
-srcToPlay: https://itch.io/embed/2642103
+srcToPlay: https://itch.io/embed-upload/10187077?color=2e364f
 hrefToPlay: https://abominable-science.itch.io/merlinagency
 onItchio: https://abominable-science.itch.io/merlinagency
 width: 864
