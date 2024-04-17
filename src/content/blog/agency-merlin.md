@@ -1,7 +1,7 @@
 ---
 author: Dylan von Arx
-pubDatetime: 2020-02-13T15:46:34.737Z
-title: "Agency Merlin : The Enchanted Feather"
+pubDatetime: 2020-04-15T15:46:34.737Z
+title: Agency Merlin - The Enchanted Feather
 slug: agency-merlin
 featured: true
 ogImage: images/BannerAgencyMerlin.png
