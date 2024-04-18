@@ -4,11 +4,11 @@ pubDatetime: 2020-02-13T15:46:34.737Z
 title: Snow Factory
 slug: snow-factory
 featured: true
-ogImage: images/SF_gameplay.gif
+ogImage: images/BannerSF.png
 ogBanner: images/BannerSF.png
 tags:
   - Game Jam
-description: Get Out is a 2d platform fighting video game, multiplayer up to 4 players. The only rule, eject your opponent without being ejected.
+description: Expand your snowball business a little cookie-clicker style, unlock the different types of snowballs and hire slave elves to automate the process.
 
 furtherInfo: true
 teamsize: 3
@@ -30,7 +30,7 @@ height: 600
 hasVideo: false
 ---
 
-Game Jam organiser à la Sae Institut entre les étudiants et les externe qui souhaite se faire de l'experience dans la réalisation et la production dans la période hivernale, mon rôle création de tous les menus et d'un system de layer pour afficher les trois différent mécaniques du jeu produit par mes collèguespour produire une prototype fonctionnel téléphone.
+Game Jam organised at the Sae Institut between students and externs wishing to gain experience in directing and producing in the winter period, my role creating all the menus and a layer system to display the three different mechanics of the game produced by my colleagues to produce a working prototype phone.
 
 <h3 class="post-title">Project Summary</h3>
 
@@ -61,7 +61,7 @@ Game Jam organiser à la Sae Institut entre les étudiants et les externe qui so
 
 <h3 class="post-title">Personal Experience</h3>
 
-On a pu produire dans un temps record le jeu! dès la premiere journée, c'etait operationnel car la coordination de l'équipe était tout simplement parfaite
-on assembler chaque partie de système avec un timing parfait. même si on pu peaufiner le jeu, il y a hélas un evenement dans le jeu qui gâche l'experience (Explosion nucléaire, élimine tous les esclave/employé de votre entreprise) qui oblige de recommencer la partie du début. évité de rajouter des évenement qui détruit l'investissement du joueur au sein de notre jeu.
+We were able to produce the game in record time! from day one, it was up and running because the team's coordination was simply perfect.
+we assembled each part of the system with perfect timing. even though we were able to fine-tune the game, there was unfortunately one event in the game that spoiled the experience (nuclear explosion, eliminating all the slaves/employees in your company) which meant we had to start the game from the beginning again. we avoided adding events that destroyed the player's investment in our game.
 
 <b>Thank you!</b>
