@@ -4,8 +4,8 @@ pubDatetime: 2020-02-13T15:46:34.737Z
 title: Snow Factory
 slug: snow-factory
 featured: true
-ogImage: images/BanierGetOut.gif
-ogBanner: images/GetoutBanner.png
+ogImage: images/SF_gameplay.gif
+ogBanner: images/BannerSF.png
 tags:
   - Game Jam
 description: Get Out is a 2d platform fighting video game, multiplayer up to 4 players. The only rule, eject your opponent without being ejected.
