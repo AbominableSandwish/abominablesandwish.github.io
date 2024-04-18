@@ -20,9 +20,10 @@ time: 48 Hours
 unity: true
 unreal: false
 godot: false
-canPlaying: false
+canPlaying: true
 hrefToPlay: https://stowy.itch.io/need-more-bullets
 onItchio: https://stowy.itch.io/need-more-bullets
+srcToPlay: https://itch.io/embed-upload/10213195
 width: 864
 height: 600
 

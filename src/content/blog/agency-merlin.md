@@ -1,6 +1,6 @@
 ---
 author: Dylan von Arx
-pubDatetime: 2024-04-15T15:46:34.737Z
+pubDatetime: 2024-04-15T00:00:00.737Z
 title: Agency Merlin - The Enchanted Feather
 slug: agency-merlin
 featured: true
@@ -25,15 +25,15 @@ srcToPlay: https://itch.io/embed-upload/10187077?color=2e364f
 hrefToPlay: https://abominable-science.itch.io/merlinagency
 onItchio: https://abominable-science.itch.io/merlinagency
 width: 864
-height: 600
+height: 580
 
 hasVideo: false
 ---
 
+<h3 class="post-title">Project Summary</h3>
+
 Game jam à la Sae organiser par les étudiants d'organiser un lieu prévu pour le concours et adapter pour se greffer à la Ludum Dare afin d'avoir toutes le conditions de notre côtès pour produire des prototypes à cette célèbre Jam afin d'évaluer et de découvrir les autres médias réaliser notre niveau au sein de l'industrie indépendant.
 un concours de 48 heure inter-Sae dans un concours mondiale de 72h, une fois la notre terminer les équipes disposent de 24h e en plus afin de peaufiner au mieux pour le concours externe! mon rôle est sur les mécaniques du jeu et sur le feedbacks ainsi que sur l'intégration dans la banque audio avec mon system audio.
-
-<h3 class="post-title">Project Summary</h3>
 
 - Game Jam: Ludum Dare Sae
 - Theme: Summoning
