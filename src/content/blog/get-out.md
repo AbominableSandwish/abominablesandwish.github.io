@@ -27,7 +27,8 @@ onItchio: https://formicarufa.itch.io/get-out
 width: 864
 height: 600
 
-hasVideo: false
+hasVideo: true
+srcVideo: https://www.youtube.com/embed/IrjDWth7fp0?si=FLkXGPDOg3ncrTcH
 ---
 
 <h3 class="post-title">Project Summary</h3>

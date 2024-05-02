@@ -27,7 +27,8 @@ onItchio: https://abominable-science.itch.io/merlinagency
 width: 864
 height: 580
 
-hasVideo: false
+hasVideo: true
+srcVideo: https://www.youtube.com/embed/NErPREVZlk4?si=MtADlV5hveinObe_
 ---
 
 <h3 class="post-title">Project Summary</h3>
