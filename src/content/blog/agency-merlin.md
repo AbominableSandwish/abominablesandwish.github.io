@@ -4,8 +4,8 @@ pubDatetime: 2024-04-15T00:00:00.737Z
 title: Agency Merlin - The Enchanted Feather
 slug: agency-merlin
 featured: true
-ogImage: images/BannerAgencyMerlin.png
-ogBanner: images/BannerAgencyMerlin.png
+ogImage: https://www.dylanvonarx.ch/images/BannerAgencyMerlin.png
+ogBanner: https://www.dylanvonarx.ch/images/BannerAgencyMerlin.png
 tags:
   - Game Jam
 description: Merlin a volatile magician, isolate very high in your Tower, the citizens and you mission is to be able to answer their requests using your magic.

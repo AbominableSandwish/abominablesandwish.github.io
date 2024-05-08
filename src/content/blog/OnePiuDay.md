@@ -4,7 +4,7 @@ pubDatetime: 2018-07-05T16:30:34.737Z
 title: One Piu Day
 slug: one-piu-day
 featured: true
-ogImage: images/BannierOnePiuDay.png
+ogImage: https://www.dylanvonarx.ch/images/BannierOnePiuDay.png
 tags:
   - Scholar
 info:

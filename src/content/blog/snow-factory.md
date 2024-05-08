@@ -4,8 +4,8 @@ pubDatetime: 2020-02-13T15:46:34.737Z
 title: Snow Factory
 slug: snow-factory
 featured: true
-ogImage: images/BannerSF.png
-ogBanner: images/BannerSF.png
+ogImage: https://www.dylanvonarx.ch/images/BannerSF.png
+ogBanner: https://www.dylanvonarx.ch/images/BannerSF.png
 tags:
   - Game Jam
 description: Expand your snowball business a little cookie-clicker style, unlock the different types of snowballs and hire slave elves to automate the process.

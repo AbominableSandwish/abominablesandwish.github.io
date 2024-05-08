@@ -4,8 +4,8 @@ pubDatetime: 2020-06-21T15:46:34.737Z
 title: Forgot(t)en Hero
 slug: forgotten-hero-game
 featured: true
-ogImage: images/ForgottenHero3.gif
-ogBanner: images/BannerForgottenHero.png
+ogImage: https://www.dylanvonarx.ch/images/ForgottenHero3.gif
+ogBanner: https://www.dylanvonarx.ch/images/BannerForgottenHero.png
 tags:
   - Game Jam
 info:

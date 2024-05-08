@@ -4,8 +4,8 @@ pubDatetime: 2020-02-00T15:30:34.737Z
 title: Space Panic
 slug: space-panic-game
 featured: true
-ogImage: images/BanierSpacePanic.gif
-ogBanner: images/BannerSpacePanic.png
+ogImage: https://www.dylanvonarx.ch/images/BanierSpacePanic.gif
+ogBanner: https://www.dylanvonarx.ch/images/BannerSpacePanic.png
 tags:
   - Game Jam
 info:
