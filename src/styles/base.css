@@ -143,6 +143,14 @@
   height: 100%;
 }
 
+#play-btn{
+  background-color:  purple;
+  padding: 28px 16px;
+  border: 2px solid black;
+  border-radius: 12px;
+  color: white;
+}
+
 #description_post{
   margin-top: 4%;
   float: left;
@@ -230,6 +238,14 @@
     float: left;
     width: 0%;
     height: 100%;
+  }
+  
+  #play-btn{
+    background-color:  purple;
+    padding: 28px 16px;
+    border: 2px solid black;
+    border-radius: 12px;
+    color: white;
   }
   
 }
