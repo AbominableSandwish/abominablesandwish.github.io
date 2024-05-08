@@ -144,11 +144,30 @@
 }
 
 #play-btn{
-  background-color:  purple;
-  padding: 28px 16px;
+  background-color:  rgb(173, 0, 173);
+  padding: 12px 16px;
   border: 2px solid black;
   border-radius: 12px;
   color: white;
+  font-size: 16px;
+}
+
+#play-btn:hover{
+  background-color:  rgb(255, 0, 255);
+  padding: 12px 16px;
+  border: 2px solid black;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+}
+
+#play-btn:active{
+  background-color:  rgb(80, 0, 80);
+  padding: 12px 16px;
+  border: 2px solid black;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
 }
 
 #description_post{
@@ -239,13 +258,31 @@
     width: 0%;
     height: 100%;
   }
-  
+
   #play-btn{
-    background-color:  purple;
-    padding: 28px 16px;
+    background-color:  rgb(173, 0, 173);
+    padding: 12px 16px;
     border: 2px solid black;
     border-radius: 12px;
     color: white;
+    font-size: 16px;
   }
   
+  #play-btn:hover{
+    background-color:  rgb(255, 0, 255);
+    padding: 12px 16px;
+    border: 2px solid black;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  #play-btn:active{
+    background-color:  rgb(80, 0, 80);
+    padding: 12px 16px;
+    border: 2px solid black;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+  }
 }

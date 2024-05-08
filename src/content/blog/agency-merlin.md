@@ -33,14 +33,14 @@ srcVideo: https://www.youtube.com/embed/NErPREVZlk4?si=MtADlV5hveinObe_
 
 <h3 class="post-title">Project Summary</h3>
 
-Game jam à la Sae organiser par les étudiants d'organiser un lieu prévu pour le concours et adapter pour se greffer à la Ludum Dare afin d'avoir toutes le conditions de notre côtès pour produire des prototypes à cette célèbre Jam afin d'évaluer et de découvrir les autres médias réaliser notre niveau au sein de l'industrie indépendant.
-un concours de 48 heure inter-Sae dans un concours mondiale de 72h, une fois la notre terminer les équipes disposent de 24h e en plus afin de peaufiner au mieux pour le concours externe! mon rôle est sur les mécaniques du jeu et sur le feedbacks ainsi que sur l'intégration dans la banque audio avec mon system audio.
+The students propose to organize a game jam at SAE. The event would provide a dedicated space for the competition and would be aligned with the Ludum Dare. This would provide all the necessary conditions for students to produce prototypes for this famous jam. The goal of the event is to evaluate and discover other media, as well as to assess the students' level within the independent industry.
+A 48-hour competition within Sae is part of a 72-hour global competition. Once our competition is over, teams have an additional 24 hours to refine their work for the external competition! My role involves game mechanics, feedback, and integration into the audio bank with my audio system.
 
 - Game Jam: Ludum Dare Sae
 - Theme: Summoning
 - Team: 3 programmers, 2 game artists & 1 Audio Desiger
 - Genre:
-- Rule: Survive le plus longtemps
+- Rule: Survive as long as possible
 
 <h3 class="post-title">Roles and Contributions</h3>
 
@@ -61,8 +61,7 @@ un concours de 48 heure inter-Sae dans un concours mondiale de 72h, une fois la 
 
 <h3 class="post-title">Personal Experience</h3>
 
-étant le plus experimenté de mon équipe, rapidement le rôle m'a été attribuer pour gerer tout le bon déroulement de la production, et sur enseignement des différent étape,
-la recherche du game design générale, la découpe des divers tâches à réaliser pour réaliser tous les systèmes nescessaires et leur priorisation, puis sur l'assemblage de tous les mécaniqude la correction de tous les bugs et de finaliser le maximum de feedback, j'ai été heureux de pouvoir reprendre le lead d'un projet et d'avoir assister au bon déroulement d'un produit jusqu'à la fin du concours, j'ai énorméement appris sur la manipulation des divers paramètre audio de Unity afin de plus facilemenent moduler a ma guise, afin d'améliorer au mieux les feedbacks sonores d'un jeu
+As the most experienced member of my team, I was quickly given the role of managing the entire production process. This included overseeing the various stages, from researching the overall game design to breaking down the tasks required to create all the necessary systems and prioritizing them. I also assembled all the mechanics, fixed all the bugs, and finalized as much feedback as possible. I was thrilled to be able to take the lead on a project and see it through to completion. I learned a lot about manipulating the various audio settings in Unity to better modulate the sound feedback in a game. This helped me improve the overall sound experience of the game.
 
 <b>Thank you!</b>
 
