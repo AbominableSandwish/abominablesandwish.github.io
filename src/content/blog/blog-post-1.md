@@ -4,7 +4,7 @@ pubDatetime: 2024-02-05T13:30:34.737Z
 title: Blogpost-1
 slug: blog-post-1
 featured: false
-ogImage: images/sae_institute_genve_cover.jpg
+ogImage: https://www.dylanvonarx.ch/images/sae_institute_genve_cover.jpg
 tags:
   - Sae-Institut
 description: Here, you will find the key aspects and different analyses to highlight about the behavior and design of a camera in order to offer an adapted experience to guide the players wisely, the principles not to be neglected throughout a project and the chosen solutions.
