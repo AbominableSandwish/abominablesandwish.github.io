@@ -202,16 +202,6 @@
   float: left;
 }
 
-#logoHeader{
-  width: 32;
-  height: 32;
-}
-
-#titleHeader{
-  float: left;
-}
-
-
 @media(min-width: 884px){
   
 #post{
