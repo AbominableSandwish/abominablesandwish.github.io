@@ -18,7 +18,7 @@ export const LOCALE = {
 
 export const LOGO_IMAGE = {
   enable: true,
-  svg: true,
+  svg: false,
   width: 64,
   height: 64,
 };
