@@ -43,6 +43,22 @@ function reflectPreference() {
     document
       .querySelector("meta[name='theme-color']")
       ?.setAttribute("content", bgColor);
+    // Get a reference to the body element
+    const BannerTop = document.getElementById("BannerTop");
+    // Check if the body element exists before using getComputedStyle
+    if (BannerTop) {
+      // Get the background color property
+      const bgColor = computedStyles.backgroundColor;
+      BannerTop.setAttribute("style", "background-color:" + bgColor + ";");
+    }
+
+    const BannerDown = document.getElementById("BannerDown");
+    // Check if the body element exists before using getComputedStyle
+    if (BannerDown) {
+      // Get the background color property
+      const bgColor = computedStyles.backgroundColor;
+      BannerDown.setAttribute("style", "background-color:" + bgColor + ";");
+    }
   }
 }
 
