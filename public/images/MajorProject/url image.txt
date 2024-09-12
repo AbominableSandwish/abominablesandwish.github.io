@@ -1,0 +1,6 @@
+NLP
+https://medium.com/voice-tech-podcast/a-brief-intro-into-natural-language-processing-669b27a0bbc0
+N-gram
+https://www.solbakkn.com/math/ngramtables.htm
+NeuralNetwork:
+https://www.kdnuggets.com/2019/11/designing-neural-networks.html
