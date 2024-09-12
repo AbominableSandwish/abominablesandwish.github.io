@@ -1,7 +1,7 @@
 ---
 author: Dylan von Arx
 pubDatetime: 2024-02-05T13:30:34.737Z
-title: Blogpost-1
+title: Blog Post 1
 slug: blog-post-1
 featured: false
 ogImage: https://www.dylanvonarx.ch/images/sae_institute_genve_cover.jpg
