@@ -359,3 +359,367 @@ A simple instruction aims to prove the system’s ability to account for the spe
 An intermediate instruction aims to select an entity precisely and give a complex instruction, generally recommending arguments to contextualize the instruction and goal. For example: “the large red cube moves forward 35 meters”. We select an entity with certain characteristics and give it an action with a precise distance, detecting the number (35) and its type (meter) to create an argument.
 
 With these limitations in place, we can now design a media project. Developing a voice-controlled videogame allows us to explore the extent to which this technology can be developed and implemented in various test environments.
+
+# Media Project
+
+This chapter focuses on the practical aspect of the media project, developing a tool to address the question at the heart of the thesis. It then describes tests demonstrating the potential future of ASR in this media type.
+
+All the information analyzed in the previous chapters is part of an empirical approach to set up a development environment for producing a mini-games type videogame. An ASR was used to collect as much data as possible, enabling visualization and interpretation to draw conclusions about the final results.
+
+## General Description
+
+This media project aims to employ the player’s voice as the sole command input. Players solve various tests to control and correctly respond to problems at different complexity levels of voice control. The media project explores whether certain videogames could be adapted to voice or if a new voice-based genre could emerge in the videogame industry.
+
+Given the vast array of videogame genres, the project’s scope has been limited to ensure feasibility. A mini-game format was chosen as the most judicious approach to test various mechanics. To maximize achievements within the thesis time constraints, certain limitations have been imposed. This focused approach allows for a comprehensive exploration of voice control mechanics across different game scenarios while maintaining a manageable project scope.
+
+## Exploitation of Mini-Games
+
+Mini-games serve as a powerful tool for creating fast-paced environments suitable for data collection. They highlight aspects observable in certain genres, offering a unique perspective of voice control in videogames. The focus is on designing classic genre mechanics for observation.
+
+Action games require real-time instructions and primarily test the player’s skill and reflexes. The Mario Party series exemplifies this, combining board games with mini-games where players cooperate or compete to become the superstar.
+
+Management games allow players to act without time pressure, typically involving the oversight and improvement of an organization in a specific area. Oxygen Not Included demonstrates this, challenging players to utilize available resources to produce oxygen for crew survival while managing various elements such as gases, liquids, temperature, disease, stress, radioactivity, food, expansion, science, waste management, tidiness, agriculture, and electricity.
+
+Strategy games generally involve controlling units or buildings. Age of Empire II requires players to produce combat units and defensive structures while continuously gathering strategic resources to dominate enemies and ensure their civilization’s survival. Into the Breach offers another example, set in a post-apocalyptic universe where humanity faces giant insect-like kaijus. The objective is to protect civilian buildings and defense robots to survive as long as possible and potentially eliminate the threat.
+
+# Hardware Used
+
+### Computer
+
+• CPU: AMD Ryzen 7 6800H With Radeon Graphic \@3.2 GHz
+• GPUs: Nvidia GeForce RTX 3070 Ti Laptop & AMD Radeon(TM) Graphic
+• RAM: 16 GB \@4,800 MHz
+• OS: Windows 11x64 architecture
+
+### Device Input Sound
+
+• Microphone Array (Realtek(R) Audio) Format: 2 channels, 16 bit, 48,000 Hz (DVD Audio)
+• Trust Microphone
+
+## Software Used
+
+• Game engine: Unity 2022.3.24f1
+• Language: C\#
+• IDE: Visual Studio 2022
+• Text processing: Visual Studio Code
+• Office software: LibreOffice
+• Editing: Typst
+
+# Test Protocol
+
+The test protocols for this thesis were implemented during a special event held at the University of Fribourg from 22 to 28 July 2024. This period was chosen to maximize participation across all age groups and collect diverse data. The Swiss Game Academy, a non-profit association, hosted the event, providing education for participants interested in game creation or those looking to enhance their skills in a team setting.
+
+A dedicated team of coaches provided support throughout the event, assisting players in realizing their goals and ensuring that all media projects maintained a consistent level of playability. This support system helped create a level playing field for participants, regardless of their prior experience with voice-controlled gaming.
+The testing process was carefully organized into distinct sections, each tailored to the specific requirements of individual mini-games. This approach allowed for a thorough evaluation of voice control mechanics across different game genres and styles, from fast-paced action games to more strategic experiences.
+
+Each mini-game underwent a specialized testing procedure designed to assess its unique features and challenges related to voice control implementation. This structured methodology enabled testers to focus on particular aspects of each game, providing valuable insights into the effectiveness and user experience of voice commands in various gaming contexts.
+For a comprehensive understanding of the testing environment and procedures employed during the event, including detailed descriptions of each mini-game’s testing protocol and data collection methods, please refer to the subsequent sections of this chapter.
+
+## Experiment Environment
+
+In recent years, the videogame population has evolved in terms of where they gather to play. Initially confined to arcades, gaming has since invaded homes and is now accessible from various devices including smartphones, portable consoles, and laptops.
+The choice of location for voice-controlled gaming significantly impacts data capture, particularly affecting ASR performance. Six specific environments were tested to evaluate the effectiveness of voice control in different settings.
+
+• **F1** : Written speech
+• **F2** : Spontaneous speech
+• **F3** : Written speech with background noise
+• **F4** : Spontaneous speech with background noise
+• **F5** : Written speech with simultaneous speakers
+• **F6** : Spontaneous speech with simultaneous speakers
+
+To ensure smooth testing, players were familiarized with the necessary voice commands, equipping them with the tools to conduct the test under appropriate circumstances. This preparation was crucial for accurate data collection and fair evaluation of the voice control system across different mini-games.
+
+The testing protocol focused on three specific scenarios: F1, F3, and F6, each simulating different real-life gaming environments. These scenarios were randomly assigned to players, providing a diverse range of testing conditions that reflected various potential use cases for voice-controlled gaming.
+
+The testing setup was carefully designed to maintain consistency and control. Each test session involved two people:
+
+1. A moderator equipped with loudspeakers to simulate one of the three randomly chosen scenarios (F1, F3 or F6). This allowed for controlled introduction of environmental factors that might affect voice recognition performance.
+
+2. A player, provided with a computer and microphone, tasked with completing all mini-games and tests using voice commands.
+
+This controlled environment made it possible to observe how different background conditions affected the performance of voice controls in various game types. By randomizing the scenarios for each player, the study aimed to gather comprehensive data on the effectiveness of voice control across a range of realistic gaming situations.
+
+The setup enabled close observation of player interactions with the voice control system, allowing for the identification of strengths and weaknesses in different environmental contexts. This approach provided valuable insights into the practical applications and limitations of voice control in gaming, contributing to the development of more robust and versatile voice recognition systems for future game designs.
+
+### Experiment Procedure
+
+This section details each stage of the experiment as it unfolded, along with the various roles involved. A moderator was responsible for overseeing each test, setting up all installations and events, and randomly initiating real-world situations using loudspeakers. The other participant in the test, the player, engaged in a mini-game to completion, allowing for data collection. The objective was to conduct a series of mini-games to evaluate player performance in managing instructions within a virtual environment using only the voice as a means of communication.
+
+#### Basic Tests
+
+In this initial phase, the tests aimed to introduce and assess the fundamentals of voice control. They evaluated the players’ adaptability and responsiveness, enabling them to achieve objectives across various test environments.
+
+_Hello World_: In Hello World, players needed to say just one word to proceed to the next test, which served as an excellent starting point to observe differences in response speed.
+
+_What Shape_: In What Shape, players had to verbally identify the largest of three 3D shapes—Capsule, Cube, Sphere—three times to complete the test.
+
+_What Color_: In What Color, players were required to verbally state the colors displayed on a chart three times to finish the test.
+
+#### Intermediate Tests
+
+Building upon the basic tests, the next phase increased complexity by combining different functionalities. It challenged the player with new environmental situations linked to classic genre mechanics such as action, strategy, management, and adventure.
+
+**Door**: In Door, players had to loudly pronounce written phrases to open each of the five doors blocking their progress.
+
+**Jump**: In Jump, players were required to hold out as long as possible within a set boundary to avoid approaching obstacles with a single action.
+
+**Movement Entity**: In Movement Entity, players were positioned among four equidistant colored entities and had to move closer to the indicated color.
+
+**Movement Space**: In Movement Space, players were placed in an open area where they used multiple movement commands to reach the endpoint in the shortest time.
+
+#### Advanced Tests
+
+In the final phase, the tests further elaborated on the basics established in the earlier phases. The advanced tests introduced more intricate mechanics to increase complexity and proposed new challenges to assess a player’s ability to perform under pressure.
+
+\**Town Cente*r\*: The user initially has one villager and a forum. They can collect 3 different resources and must obtain a total of 500 wood to pass this test.
+
+#### Quantitative Measurement
+
+Upon completion of the different phases, quantitative measurements from all tests were automatically exported to a CSV file for analysis. The values were color-coded to differentiate significant results according to control peripherals: blue for microphone (M) and red for keyboard (K).
+
+Measured data included:
+
+• Peripherals used (keyboard or microphone)
+• Time taken to reach test objective
+• Number of misunderstood instructions
+• Total inactivity time
+
+For each instruction, the following data was collected:
+• Difficulty level (beginner, intermediate, advanced)
+• Time elapsed since the last instruction
+• Instruction completion time
+• Instruction type (movement, action)
+
+The data were processed to compare certain values, including mean, variance, and median. A statistical test was conducted using a null hypothesis, which posits that any difference in values between microphone and keyboard use isn’t merely coincidental.
+
+The primary focus of the study was to compare differences between microphone and keyboard input. While it was expected that keyboard input would yield significantly different values due to its integration in computing and gaming, it served as a crucial benchmark. This comparison aimed to identify mechanisms likely to reduce this difference in the videogame field and uncover potentially unexploited genres suitable for speech input.
+
+![book0](/images/MajorProject/books/978-0-387-71305-2-193084952.jpeg)
+![book1](/images/MajorProject/books/978-3-319-41607-6-389200070.jpeg)
+
+# Implementation Process
+
+#### Results
+
+In most studies on voice control, standard peripherals consistently demonstrate superior performance and responsiveness. However, it’s essential to examine how the differences between various peripherals, particularly in relation to videogame genres, may affect performance. Is a significant convergence between the different input methods possible?
+
+## Technical Implementation
+
+This chapter delves into the intricate design process behind the videogame developed for the experimentation phase. It outlines the core design elements of the media project, detailing the algorithms employed and the comprehensive tasks undertaken to bring the game to fruition.
+
+### SOA or Keyboard Killer
+
+Once speech-to-text functionality is operational, the working environment within the game engine is ready to design the main algorithm, code-named “SOA” (Selection Order, Argument) or “keyboard killer”. To implement an algorithm that segments the player’s transcribed speech and identifies the desired action, it’s crucial to break down the various components.
+
+![AlphaSAO](/images/MajorProject/Diagrams/AlphaSAO_Light.png)
+
+#### Identifying Instructions
+
+Executing actions through verbs can be relatively challenging due to two major issues. First, the multitude of verbs that can convey the same action, as individuals often phrase requests differently, necessitating consideration of various formulations. Second, there is the complexity of conjugation. In the French language, verbs are used according to their tense (indicative, imperative, subjunctive, conditional) and are conjugated based on the subject. This significantly increases the number of different forms for a single verb.
+
+To address this challenge, the range was simplified and all derivatives were converted into their **lemma** form, which streamlines the process. In linguistics, a lemma is an autonomous unit that constitutes the lexicon of a language, often referred to as the canonical form of a word. This reference form doesn’t include inflectional markings, allowing different morphological forms of a word to be grouped under a single term. The infinitive form served as the verb form, while the masculine singular form was used for adjectives and common nouns.
+
+![lemmatization](/images/MajorProject/lemmatizer/lemmatization.jpeg)
+
+**Note.** Is the process of grouping together the inflected forms of a word so they can be analysed as a single item, identified by the word's lemma, or dictionary form.
+
+#### Selection
+
+The first step in entity selection involved recognizing that proper nouns pose challenges for ASR; common nouns are far more preferable. For instance, to call a dog, one can simply say “dog”. While this works well, distinguishing between multiple dogs requires additional identifiers, such as color, breed, size or gender. To enhance the system’s complexity, entities must possess specific features that a player can select based on these differences.
+
+Common nouns were indexed—words that identify entities capable of performing actions or instructions (e.g., cube, sphere, player)—to retrieve them from a list. Additionally, a table of adjectives (e.g., small, medium, large, red, blue, green) was used to identify, isolate, and select specific entities or groups from a diverse range.
+
+![Entity](/images/MajorProject/Diagrams/Entity.png)
+
+#### Argument
+
+An action must perform a specific task, but the arguments provided to execute the action can vary widely. For example, entity A may move toward the red square, toward entity B or 10 meters in a specified direction.
+
+Therefore, arguments must be versatile to adapt to the different parameters of an action. An argument can take the form of “where” (direction, angle, space, entity), “what” (subject, object) or “when” (duration, date).
+
+#### Entity Component System (ECS)
+
+With the previous components established, entities can be selected, and instructions and arguments can be detected. The next step was to design how the actions and instructions defined by the player are executed. To finalize the mechanics of this media project, an ECS architecture was chosen.
+
+An **entity** is defined as an object within a system, primarily serving as a unique identifier that can be linked to various components related to a given action.
+
+A **component** represents the characteristics of an entity regarding a specific aspect. It stores the data necessary for the action which the system manipulates.
+
+A **system** processes the data in the relevant component(s) to complete the entity’s action.
+Together, these three elements form the core of the system, enabling it to fulfill the tasks required by the player.
+
+The aim of this structure is to be data-oriented, but for the complexity of the project it will be object-oriented to simplify the development of the project media.
+
+Now that the various mini-game instructions were functioning, we focused on how the gameplay loops, rules, and tests interact.
+
+### Gameplay Loops
+
+With the control and action mechanics established, the next step was to implement systems that manage each test environment and the various gameplay loops to ensure smooth operation of the test protocol. Given that each gameplay and test had distinct mechanics and resolutions, it was crucial to identify operational similarities.
+
+For each gameplay scenario, the moderator processed its actions in the main loop (Update), while for tests, he checked whether the test conditions had been met (Check). Inheritance was utilized to address this challenge efficiently.
+
+![MainLoop](/images/MajorProject/Diagrams/MainLoopLight.drawio.png)
+
+In summary, the moderator was responsible for overseeing the various games and tests within the media project. The voice recognition API, along with the entity, action, and argument selection detection systems, as well as the ECS framework, were designed to interpret and resolve player actions. The final step involved integrating these different processes to create a functional media project.
+
+These considerations conclude the core of the media project. A detailed discussion of the various systems designed within the ECS framework can be found in the appendix for further reference.
+
+# Results
+
+In the results section, we analyze test outcomes from simplest to most complex, using statistical hypotheses to determine if the research data aligns with the issue at hand.
+
+Levene’s test, a deductive statistic, assesses variance equality for a variable across two samples. If the p-value is below a significance level, there’s less than a 5% chance of being correct, and the null hypothesis is retained.
+
+The Two-sided t-test examines differences between using a keyboard and a microphone regarding action time or exercise completion time. If the p-value is less than 0.05, the null hypothesis is retained.
+
+If hypotheses are rejected, we observe differences in mean, median, and variance to determine if voice recognition in video games has a viable future and whether these exercises help identify its limits for more advanced uses.
+
+**Hello Word**
+
+![PlotHello](/images/MajorProject/Data/Hello/plot.png)
+
+The Levene test of equality of variance yielded a $"p-value"$ of $.04$, which is below the 5% significance level. The Levene test was therefore significant and the null hypothesis that all variances of the groups are equal was rejected. Thus, there was no variance equality in the samples.
+
+A two tailed t-test for independent samples (equal variances not assumed) showed that the difference between Microphone and Keyboard with respect to the dependent variable Time was not statistically significant, $t(12.32) = 0.27, p = .791$, 95% confidence interval [-4.14, 5.32]. Thus, the null hypothesis was not rejected.
+
+The results of the descriptive statistics showed that the Microphone group had higher values for the dependent variable Time $("M" = 8.31, "SD" = 5.72)$ than the Keyboard group $("M"= 7.72, "SD" = 2.98)$.
+
+**What Shape**
+
+![PlotShape](/images/MajorProject/Data/Shape/plot.png)
+
+The Levene test of equality of variance yielded a $"p-value"$ of $.118$, which is above the 5% significance level. The Levene test was therefore not significant and the null hypothesis that all variances of the groups are equal was not rejected. Thus, there was variance equality in the samples.
+
+A two tailed t-test for independent samples (equal variances assumed) showed that the difference between Microphone and Keyboard with respect to the dependent variable Time was not statistically significant, $t(16) = 1.2, p = .248$, 95% confidence interval [-2.75, 9.93]. Thus, the null hypothesis was not rejected.
+
+The results of the descriptive statistics showed that the Microphone group had higher values for the dependent variable Time $(M = 8.89, "SD" = 7.49)$ than the Keyboard group $(M = 5.3, "SD" = 4.33)$.
+
+**What Color**
+
+![PlotColor](/images/MajorProject/Data/Color/plot.png)
+
+The Levene test of equality of variance yielded a $"p-value"$- of $.002$, which is below the 5% significance level. The Levene test was therefore significant and the null hypothesis that all variances of the groups are equal was rejected. Thus, there was no variance equality in the samples.
+
+A two tailed t-test for independent samples (equal variances not assumed) showed that the difference between Microphone and Clavier with respect to the dependent variable Time was statistically significant, $t(10.08) = 2.24, p = .049$, 95% confidence interval [0.1, 32.47]. Thus, the null hypothesis was rejected.
+
+The results of the descriptive statistics showed that the Microphone group had higher values for the dependent variable Time $(M = 26.64, "SD" = 22.33)$ than the Keyboard group $(M = 10.35, "SD" = 4.93)$.
+
+**Jump**
+
+![PlotJump](/images/MajorProject/Data/Jump/plot.png)
+
+The Levene test of equality of variance yielded a $"p-value"$ of $.593$, which is above the 5% significance level. The Levene test was therefore not significant and the null hypothesis that all variances of the groups are equal was not rejected. Thus, there was variance equality in the samples.
+
+A two tailed t-test for independent samples (equal variances assumed) showed that the difference between Microphone and Keyboard with respect to the dependent variable Time was not statistically significant, $t(126) = 0.04, p = .965$, 95% confidence interval [-9.36, 9.78]. Thus, the null hypothesis was not rejected.
+
+The results of the descriptive statistics showed that the Microphone group had higher values for the dependent variable Time $(M = 13, "SD" = 27.68)$ than the Keyboard group $(M = 12.79, "SD" = 22.11)$.
+
+**Movement Entity**
+
+![PlotEntity](/images/MajorProject/Data/MEntity/plot.png)
+
+The Levene test of equality of variance yielded a $"p-value"$ of $.317$, which is above the 5% significance level. The Levene test was therefore not significant and the null hypothesis that all variances of the groups are equal was not rejected. Thus, there was variance equality in the samples.
+
+A two tailed t-test for independent samples (equal variances assumed) showed that the difference between Microphone and Keyboard with respect to the dependent variable Time was not statistically significant, $t(33) = -1.16, p = .254$, 95% confidence interval [-54.66, 14.97]. Thus, the null hypothesis was not rejected.
+
+The results of the descriptive statistics showed that the Microphone group had lower values for the dependent variable Time $(M = 33.59, "SD" = 39.41)$ than the Keyboard group $(M = 53.44, "SD" = 44.93)$.
+
+**Movement Space**
+
+![PlotSpace](/images/MajorProject/Data/MSpace/plot.png)
+
+The Levene test of equality of variance yielded a $"p-value"$ of $.224$, which is above the 5% significance level. The Levene test was therefore not significant and the null hypothesis that all variances of the groups are equal was not rejected. Thus, there was variance equality in the samples.
+
+A two tailed t-test for independent samples (equal variances assumed) showed that the difference between Microphone and Keyboard with respect to the dependent variable Time was not statistically significant, $t(61) = -1.34, p = .184$, 95% confidence interval [-11.93, 2.34]. Thus, the null hypothesis was not rejected.
+
+The results of the descriptive statistics showed that the Microphone group had lower values for the dependent variable Time (M = 12.25, SD = 10.96) than the Keyboard group (M = 17.04, SD = 16.64).
+
+**Door**
+
+![PlotSpace](/images/MajorProject/Data/Door/plot.png)
+
+The Levene test of equality of variance yielded a $"p-value"$ of $<.001$, which is below the 5% significance level. The Levene test was therefore significant and the null hypothesis that all variances of the groups are equal was rejected. Thus, there was no variance equality in the samples.
+
+A two tailed t-test for independent samples (equal variances not assumed) showed that the difference between Microphone and Keyboard with respect to the dependent variable Time was statistically significant, $t(6.11) = -4.98, p = .002$, 95% confidence interval [-100.65, -34.48]. Thus, the null hypothesis was rejected.
+
+The results of the descriptive statistics showed that the Microphone group had lower values for the dependent variable Time $(M = 52.9, "SD" = 4.09)$ than the Keyboard group $(M = 120.47, "SD" = 35.74)$.
+
+**Town Center**
+
+![PlotSpace](/images/MajorProject/Data/TownCenter/plot.png)
+
+The Levene test of equality of variance yielded a $"p-value"$ of $.006$, which is below the 5% significance level. The Levene test was therefore significant and the null hypothesis that all variances of the groups are equal was rejected. Thus, there was no variance equality in the samples.
+
+A two tailed t-test for independent samples (equal variances not assumed) showed that the difference between Microphone and Keyboard with respect to the dependent variable Time was statistically significant, $t(155.37) = -2.71, p = .007$, 95% confidence interval [-15.32, -2.38]. Thus, the null hypothesis was rejected.
+
+The results of the descriptive statistics showed that the Microphone group had lower values for the dependent variable Time $(M = 13.91, "SD" = 17.98)$ than the Keyboard group $(M = 22.76, "SD" = 32.25)$.
+
+**All Order**
+
+![PlotSpace](/images/MajorProject/Data/AllOrder/plot.png)
+
+The Levene test of equality of variance yielded a $"p-value"$ of $.026$, which is below the 5% significance level. The Levene test was therefore significant and the null hypothesis that all variances of the groups are equal was rejected. Thus, there was no variance equality in the samples.
+
+A two tailed t-test for independent samples (equal variances not assumed) showed that the difference between Microphone and Clavier with respect to the dependent variable Time was statistically significant, $t(293.02) = -2.35, p = .019$, 95% confidence interval [-10.98, -0.94]. Thus, the null hypothesis was rejected.
+
+The results of the descriptive statistics showed that the Microphone group had lower values for the dependent variable Time $(M = 15.03, "SD" = 22.83)$ than the Clavier group $(M = 20.98, "SD" = 30.25)$.
+
+Overall, the analysis highlights differences in performance between using a keyboard and a microphone for time-sensitive tasks. While keyboards tend to be faster for simple tasks like typing or saying a single word, microphones prove more advantageous for complex inputs such as complete sentences. This suggests that while keyboards are efficient for straightforward commands, voice recognition may offer benefits for more intricate interactions.
+
+## Discussions
+
+In summary, I encountered several challenges during development. Firstly, the test setup wasn’t entirely resistant to user manipulation. At the Swiss Game Academy, players intentionally deviated from the intended path to uncover errors or test the voice recognition system’s transcription capabilities, which led to issues that significantly hindered user progress and complicated data collection.
+
+Notwithstanding the above, voice recognition technology still requires further development for effective use in video games. While my project was successful on its own scale, the results it yielded are insufficient to define core game mechanics. More specialization is needed to create a truly unique product.
+
+That said, I’m confident that the future of voice recognition in video games is promising. Statistics clearly show a difference in efficiency between using a keyboard and a microphone for basic tasks. But for lack of time, I wasn’t able to explore design methods and strategies that could significantly enhance action speed. These might include voice shortcuts or adapted user interfaces, similar to how keyboard shortcuts improve efficiency. As research and use of voice recognition deepen, voice shortcuts may become more prevalent.
+
+The video game industry will undoubtedly create experiences that transform our relationship with voice recognition, deepening engagement and reaching new audiences, including those with disabilities. My personal goal is to develop a comprehensive game that fully integrates voice recognition transcription
+through one or more mechanics, offering a unique and accessible experience.
+
+# Glossary
+
+**Longitudinal Wave**
+A disturbance of a medium that propagates in the same direction as the wave itself, contrasting with transverse waves where the disturbance occurs perpendicular to the direction of propagation.
+
+**Application Programming Interface (API)**
+A communication protocol between different software components, defining a set of functions that allow applications to access specific features or data of an operating system, application or other service.
+
+**Software Development Kit**
+A comprehensive set of tools, libraries, documentation, code samples, and guides enabling developers to create software applications on a specific platform. It typically includes a compiler, debugger, and often a software framework to streamline development.
+
+**Automatic Speech Recognition**
+The process of converting spoken language into written text. This complex task involves capturing sound frequencies via a microphone, analyzing them, and translating them into machine-readable text. The challenge lies in interpreting the nuances of human speech, including context, tone, implicit expressions, sarcasm or humor, which often rely on non-verbal cues.
+
+**Statistical Model**
+A mathematical representation of real-world phenomena, designed to simplify complex processes and make explicit hypotheses about the subject under study. Its primary purpose is to facilitate mathematical analysis and produce solutions that closely approximate observed data.
+
+**Corpora**
+Large and structured sets of texts used in linguistic analysis. Corpus linguistics, a branch of study closely tied to the development of computer systems and textual databases, focuses on analyzing these sets of texts. Corpora are instrumental in studying language norms, including structure and code.
+
+**Machine Learning**
+A field of study focused on developing algorithms and statistical models that enable computer systems to improve their performance on a specific task through experience. It involves providing computers with data and information from real-world observations and interactions, allowing them to learn and refine their learning methodologies over time.
+
+# ludothèque
+
+**Games**
+
+**Hey You, Pikachu** (December 12, 1998), Ambrella, Nintendo, Nintendo 64
+
+**In verbis Vertus** (April 3, 2015), Indomitus Games, Indomitus Games, PC
+
+**life Line Voice Action Adventure** (January 30, 2003), Sony Computer Entertainment, Sony Computer Entertainment, PS2
+
+**Minecraft** (November 18, 2011), Mojang Studios and Xbox Game Studios and 4J Studios, Mojang Studios (PC, Mobile) and Xbox Game Studios (Xbox 360, Xbox One et Windows Phone) and Sony Computer Entertainment (PS3, PS4 et PS Vita) and Nintendo (Wii U, New Nintendo 3DS et Nintendo Switch) and NetEase (China)
+
+**Space Station 13** (February 15, 2003), Originally Exadv1, now community based, PC
+
+**Age of empire II** (September 27, 1999), Ensemble Studios, Microsoft
+and Konami, Microsoft Windows and MacOS and PlayStation 2
+
+**Oxygen not include** (February, 2017), Klei Entertainment,
+Klei Entertainment, Windows and Linux and MacOS
+
+**Into the breach** (27 février 2018), Subset Games, Subset Games Windows and Mac and Linux.
+
+= Annex
