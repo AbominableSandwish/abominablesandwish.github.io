@@ -162,19 +162,19 @@ ASR systems rely on various technologies and algorithms, often in conjunction wi
 
 An HMM is based on the Markov chain model, a stochastic process that determines the probabilities of transitioning to a given state based on the current state. This fundamental property allows for predictions about future states without relying on previous states, even though the states themselves are unknown to the user.
 
-![HiddenMarkovModel](/images/MajorProject/typeAlgorithm/HiddenMarkovModel.svg.png)
+![HiddenMarkovModel](/images/MajorProject/TypeAlgorithm/HiddenMarkovModel.png)
 
 ### N-Gram Model
 
 An N-Gram model is a probabilistic linguistic model based on a Markov chain of order N-1. It analyzes sequences of n adjacent elements in a given instruction to predict the likelihood of word or phoneme combinations in sentences and speech. This approach aims to improve the accuracy of language modeling and speech recognition systems.
 
-![N-gram](/images/MajorProject/typeAlgorithm/ngram.png)
+![N-gram](/images/MajorProject/TypeAlgorithm/ngram.png)
 
 ### Neural Networks
 
 Neural networks, primarily used for deep-learning algorithms, leverage data banks by mimicking the interconnectivity of the human brain through different layers of nodes. Each node consists of inputs, weights, a threshold, and an output. If the output value exceeds a given threshold, it activates the node, transmitting the data to the next layer of the network.
 
-![NeuralNetwork](/images/MajorProject/typeAlgorithm/NeuralNetwork.png)
+![NeuralNetwork](/images/MajorProject/TypeAlgorithm/NeuralNetwork.png)
 
 **Note.** This is the number of features your neural network uses to make its predictions. The input vector needs one input neuron per feature. For tabular data, this is the number of relevant features in your dataset. You want to carefully select these features and remove any that may contain patterns that won’t generalize beyond the training set (and cause overfitting).
 
@@ -186,7 +186,7 @@ Speaker Diarization enhances HMM efficiency by deconstructing audio data and ide
 
 Bottom-up algorithms separate all the audio content into a succession of small segments and then reassemble the parts which most closely resemble the speaker. In contrast, top-down algorithms start with a single segment containing all the data and iteratively separate them until they reach the same number of segments as there are speakers.
 
-![Diarization](/images/MajorProject/typeAlgorithm/Diarization.png)
+![Diarization](/images/MajorProject/TypeAlgorithm/Diarization.png)
 
 **Note.** (right) Alternative clustering schemas, (left) General speaker diarization architecture.
 
@@ -194,7 +194,7 @@ Bottom-up algorithms separate all the audio content into a succession of small s
 
 NLP is a multidisciplinary field which combines linguistics, computer science, and AI. It focuses on enabling machines to understand, interpret, and generate human language in a valuable way. NLP falls within the broader domains of AI and machine learning, allowing computers to process natural language inputs and produce text-based outputs.
 
-![NLP](/images/MajorProject/typeAlgorithm/NLP_image.png)
+![NLP](/images/MajorProject/TypeAlgorithm/NLP_image.png)
 
 **Note.** You can see NLP in red.
 
@@ -492,7 +492,7 @@ The data were processed to compare certain values, including mean, variance, and
 
 The primary focus of the study was to compare differences between microphone and keyboard input. While it was expected that keyboard input would yield significantly different values due to its integration in computing and gaming, it served as a crucial benchmark. This comparison aimed to identify mechanisms likely to reduce this difference in the videogame field and uncover potentially unexploited genres suitable for speech input.
 
-![books](/images/MajorProject/books/books.jpeg)
+![books](/images/MajorProject/books/books.png)
 
 # Implementation Process
 
