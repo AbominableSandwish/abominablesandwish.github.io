@@ -236,9 +236,7 @@ Transcription work is extremely arduous due to the vast amount of video content 
 
 Virtual assistants have become one of the most widely adopted technologies in our society. Found primarily in smartphones, they optimize and revolutionize administrative tasks. Users can manage their calendars, send messages to contacts, and perform various other functions with just a few spoken words, eliminating the need to physically interact with their devices. Virtual assistants like Siri, Cortana or Bixby may well replace traditional methods of device interaction in the future.
 
-![Siri](/images/MajorProject/virtualAssistant/Apple-Siri-Logo.png)
-
-![Google](/images/MajorProject/virtualAssistant/Google_Assistant_logo.png)
+![Virutal](/images/MajorProject/virtualAssistant/VirtualAssistance.png)
 
 ### Videogames
 
@@ -494,8 +492,7 @@ The data were processed to compare certain values, including mean, variance, and
 
 The primary focus of the study was to compare differences between microphone and keyboard input. While it was expected that keyboard input would yield significantly different values due to its integration in computing and gaming, it served as a crucial benchmark. This comparison aimed to identify mechanisms likely to reduce this difference in the videogame field and uncover potentially unexploited genres suitable for speech input.
 
-![book0](/images/MajorProject/books/978-0-387-71305-2-193084952.jpeg)
-![book1](/images/MajorProject/books/978-3-319-41607-6-389200070.jpeg)
+![books](/images/MajorProject/books/books.jpeg)
 
 # Implementation Process
 
