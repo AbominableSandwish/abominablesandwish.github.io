@@ -26,5 +26,5 @@ As a Swiss citizen, I also want to help the Swiss video game industry grow, as i
 This website is made with the AstroPaper template. AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme.
 
 <b>Curriculum Vitae</b>
-<a href="./CV/CV_Light.pdf" download>Light</a>
-<a href="./CV/CV_Dark.pdf" download>Dark</a>
+<a href="../CV/CV_Light.pdf" download>Light</a>
+<a href="../CV/CV_Dark.pdf" download>Dark</a>
