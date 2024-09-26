@@ -3,6 +3,10 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
+<b>Curriculum Vitae</b>
+<a href="../CV/CV_Light.pdf" download>Light</a>
+<a href="../CV/CV_Dark.pdf" download>Dark</a>
+
 <div>
   <img src="/assets/MyFace.jpg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
 </div>
