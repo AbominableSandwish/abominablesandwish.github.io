@@ -1,8 +1,8 @@
 ---
 author: Dylan von Arx
 pubDatetime: 2024-04-15T00:00:00.737Z
-title: Agency Merlin - The Enchanted Feather
-slug: agency-merlin
+title: Merlin Agency - The Enchanted Feather
+slug: merlin-agency
 featured: true
 ogImage: https://www.dylanvonarx.ch/images/BannerAgencyMerlin.png
 ogBanner: https://www.dylanvonarx.ch/images/BannerAgencyMerlin.png
