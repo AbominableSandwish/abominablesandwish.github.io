@@ -26,7 +26,7 @@ hasVideo: false
 srcVideo: https://www.youtube.com/embed/OPD8VxXYFP4?si=O13g3UB0NvTgvqz0
 ---
 
-# One Piu Day
+# Sausage game
 
 <h3 class="post-title">Description</h3>
 
