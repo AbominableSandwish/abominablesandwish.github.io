@@ -1,22 +1,24 @@
-name: Deploy to GitHub Pages
+name: CI
 
 on:
-  # Déclenchez le workflow chaque fois que vous poussez vers la branche `main`
-  # Vous utilisez un nom de branche différent ? Remplacez `main` par le nom de votre branche
-  push:
-    branches: [ main ]
-  # Vous permet d'exécuter ce workflow manuellement à partir de l'onglet Actions sur GitHub.
-  workflow_dispatch:
-
-# Autoriser cette tâche à cloner le dépôt et à créer un déploiement de page
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+  workflow_call:
 
 jobs:
   build:
+    name: Code standards & build
     runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    strategy:
+      matrix:
+        node-version: [20]
+
     steps:
       - name: "☁️ Checkout repository"
         uses: actions/checkout@v4
@@ -43,24 +45,3 @@ jobs:
 
       - name: "🚀 Build the project"
         run: pnpm run build
-        #with:
-            # path: . # L'emplacement racine de votre projet Astro dans le dépôt. (facultatif)
-            # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (facultatif)
-            # package-manager: yarn # Le gestionnaire de paquets Node qui doit être utilisé pour installer les dépendances et build votre site. Détecté automatiquement en fonction de votre lockfile. (facultatif)
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Download build output
-        uses: actions/download-artifact@v4
-        with:
-          name: astro-dist
-          path: .
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
