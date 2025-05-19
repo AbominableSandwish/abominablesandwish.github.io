@@ -17,26 +17,32 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
-      - name: Checkout your repository using git
-        uses: actions/checkout@v3
+    steps:
+      - name: "☁️ Checkout repository"
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: "📦 Install pnpm"
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
 
-      - name: Install dependencies
-        run: npm install
+      - name: "📦 Install dependencies"
+        run: pnpm install
 
-      - name: Build site
-        run: npm run build
+      - name: "🔎 Lint code"
+        run: pnpm run lint
 
-      - name: Upload build output
-        uses: actions/upload-pages-artifact@v1
-        with:
-          name: astro-dist
-          path: dist
+      - name: "📝 Checking code format"
+        run: pnpm run format:check
+
+      - name: "🚀 Build the project"
+        run: pnpm run build
         #with:
             # path: . # L'emplacement racine de votre projet Astro dans le dépôt. (facultatif)
             # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (facultatif)
