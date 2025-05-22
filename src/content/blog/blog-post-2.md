@@ -4,7 +4,7 @@ pubDatetime: 2024-01-22T15:28:34.737Z
 title: Blog Post 2
 slug: blog-post-2
 featured: false
-ogImage: https://www.dylanvonarx.ch/images/sae_institute_genve_cover.jpg
+ogImage: https://www.dylanvonarx.ch/images/Girl&kitty_hospital_chatgpt.png
 tags:
   - release
 description: The foundation is our characters, who must be able to complement each other perfectly through different abilities and powers. Obsolete powers should be avoided in order to prevent one character from being denigrated. Specific tests should be set up for each mechanic, both for its specific stability and for the stability of all mechanics together.
